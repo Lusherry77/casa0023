@@ -1,6 +1,6 @@
 {
     "id": "5DA01DC0",
-    "path": "~/Desktop/Remote Sensing/learning_diary/summary.qmd",
+    "path": "~/Documents/Remote_Sensing/learning_diary/summary.qmd",
     "project_path": "learning_diary/summary.qmd",
     "type": "quarto_markdown",
     "hash": "1100202827",
@@ -11,14 +11,16 @@
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "0,0",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1740303975,
+    "lastKnownWriteTime": 1740313705,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1740303975,
+    "last_content_update": 1740313705,
     "read_only": false,
     "read_only_alternatives": []
 }
