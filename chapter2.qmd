@@ -1,0 +1,9 @@
+# Week 2 - Xaringan
+
+In summary, this book has no content whatsoever.
+
+## Introduction of TerraSAR-X satellite
+
+<iframe src="slides/lecture2_slides.html" width="100%" height="600px"></iframe>
+
+> [Or click here](slides/lecture2_slides.html) to watch the slides in a new window.

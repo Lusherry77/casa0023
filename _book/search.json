@@ -1,0 +1,52 @@
+[
+  {
+    "objectID": "chapter2.html",
+    "href": "chapter2.html",
+    "title": "2  Week 2 - Xaringan",
+    "section": "",
+    "text": "2.1 Introduction of TerraSAR-X satellite\nIn summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 2 - Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#我的幻灯片展示",
+    "href": "chapter2.html#我的幻灯片展示",
+    "title": "2  Xaringan",
+    "section": "",
+    "text": "点击这里 在新窗口查看幻灯片！",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA0023 Learning Diary",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "chapter2.html#introduction-of-terrasar-x-satellite",
+    "href": "chapter2.html#introduction-of-terrasar-x-satellite",
+    "title": "2  Week 2 - Xaringan",
+    "section": "",
+    "text": "Or click here to watch the slides in a new window.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Week 2 - Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Week 1 - Introduction to Remote Sensing",
+    "section": "",
+    "text": "This is Chapter 1.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1 - Introduction to Remote Sensing</span>"
+    ]
+  }
+]

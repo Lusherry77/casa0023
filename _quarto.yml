@@ -2,13 +2,18 @@ project:
   type: book
 
 book:
-  title: "learning_diary"
+  title: "CASA0023 Learning Diary"
   author: "Yidian Liu"
   date: "1/28/2025"
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
+    - chapter2.qmd
+    - chapter3.qmd
+    - chapter4.qmd
+    - week6.qmd
+    - week7.qmd
+    - week8.qmd
     - references.qmd
 
 bibliography: references.bib
@@ -22,6 +27,7 @@ format:
     documentclass: scrreprt
 
 editor: visual
-output-dir: docs
+output-dir: _book
 
-
+resources:
+  - slides/
