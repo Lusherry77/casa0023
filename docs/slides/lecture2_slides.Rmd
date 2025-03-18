@@ -1,0 +1,134 @@
+---
+title: "TerraSAR-X"
+subtitle: "Germany's radar eye in space"
+author: "Yidian Liu"
+date: "2025/01/27 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: ["default", "xaringan-themer-copy.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      
+---
+
+# What is the TerraSAR-X?
+
+- TerraSAR-X is a German Earth-observation satellite lauched on 15 June 2007 from the Russian Baikonur Cosmodrome in Kazakhstan.
+
+- Its primary payload is an X-band radar sensor with a range of different modes of operation, allowing it to acquire images with different swath widths, resolutions and polarisations. 
+
+- The objective of the mission is to provide value-added SAR (Synthetic Aperture Radar) data in the X-band, for research and development purposes as well as scientific and commercial applications.
+
+<img src="https://www.dlr.de/en/images/2011/1/german-radar-satellite-terrasar-x_350/@@images/image-2000-3ab8c9af8d56e004787efcfc85b036f8.jpeg" 
+     alt="TerraSAR-X" 
+     width="50%" 
+     style="display: block; margin-left: auto; margin-right: auto;">
+     
+(Source:German Aerospace Center)
+
+---
+
+# TerraSAR-X details
+
+- Resolution: 1 metre, 3 metres, or 16 metres (depending on the image size)
+
+- Length: 4.88 metres
+
+- Diameter: 2.4 metres
+
+- Launch mass: 1,230 kilograms
+
+- Payload mass: about 400 kilograms
+
+- Power consumption: 800 watts (on average)
+
+- Angle of inclination with respect to the equator: 97.4 degrees (Sun synchronous)
+
+---
+
+# Strength of TerraSAR-X
+
+**All-Weather, All-Time Imaging Capability**
+
+TerraSAR-X uses X-band Synthetic Aperture Radar (SAR), allowing it to penetrate clouds, haze, and rain, enabling high-resolution imaging at any time of the day or night. 
+
+
+**High-Resolution Imaging**
+
+TerraSAR-X offers a maximum 1-meter resolution (Spotlight mode), allowing detailed observation of buildings, vehicles, infrastructure, and natural landscapes.
+---
+
+# Strength of TerraSAR-X
+
+**Multi-Mode Imaging for Greater Flexibility**
+
+TerraSAR-X provides three main imaging modes:
+
+- Spotlight mode (1m resolution): Ideal for detailed target observation (e.g., military, urban infrastructure monitoring).
+
+- StripMap mode (3m resolution): Suitable for medium-scale observation (e.g., agriculture, disaster monitoring).
+
+- ScanSAR mode (18m resolution): Best for large-area monitoring (e.g., forest coverage, ocean observations).
+
+
+**High-Precision Terrain Mapping**
+
+TerraSAR-X is equipped with Interferometric SAR (InSAR) capabilities, enabling the creation of 1-2 meter accuracy Digital Elevation Models (DEM). 
+
+
+---
+# Multimedia - Radar image of Passau
+
+<img src="https://www.dlr.de/en/radar-image-of-passau/@@images/image-600-045cc4caf40c37838c2b167a61e9aa29.jpeg" 
+     alt="Radar image of Passa" 
+     width="70%" 
+     style="display: block; margin-left: auto; margin-right: auto;">
+     
+Credit: DLR (CC BY-NC-ND 3.0)
+
+
+The team of the Center for Satellite Based Crisis Information (ZKI) of the German Aerospace Center (DLR) evaluates the images of the German radar satellite TerraSAR-X for maps of the flooded city of Passau.
+
+
+---
+
+# Multimedia - Radar image of Christmas Island
+<img src="https://www.dlr.de/en/images/2013/1/terrasar-x-image-of-christmas-island_8506/@@images/image-1000-0acec99c3dbed4f4948880ace87eba2f.jpeg" 
+     alt="Radar image of Passa" 
+     width="60%" 
+     style="display: block; margin-left: auto; margin-right: auto;">
+
+Credit: DLR (CC BY-NC-ND 3.0)
+
+Christmas Island is a 135-square-kilometre island in the Indian Ocean. In the image acquired with the German Aerospace Center (Deutsches Zentrum für Luft- und Raumfahrt; DLR) TerraSAR-X radar satellite, one thing is clear – even today, tropical rainforest proliferates on the island and the coastal cliffs continue to make life difficult for mariners.
+
+---
+
+# Reflection
+
+With TerraSAR-X, techniques and knowledge gained from earlier radar missions are expanded and systematic long-term observations are carried out. 
+
+- For example, the observation of vegetation is of outstanding importance for human life. 
+- Precise and up-to-date information on the distribution, composition and alteration of vegetation species is the basis for many applications. 
+
+One of the **outstanding features** of TerraSAR-X is its ***high spatial resolution***, which has never before been achieved by a civil radar system. This enables scientists to include detailed soil characteristics, such as the differentiation of different crops, for better classification.
+
+---
+
+# Reflection
+
+**Data Processing Challenges**: 
+
+SAR imagery can be quite complex to process. **It is often affected by noise (like speckle noise)**, and interpreting the images requires expertise in understanding the reflectance characteristics of different surfaces.
+
+**Limitations in Certain Applications**: 
+
+While TerraSAR-X has impressive capabilities, there are some limitations. For example, the resolution of the SAR imagery ***can be limited by the imaging mode***. Additionally, certain ***surface types (such as transparent water)*** may not reflect well in SAR, which can reduce the effectiveness of the data in specific applications.
+
+**Integration with GIS**: 
+
+Combining TerraSAR-X data with Geographic Information Systems (GIS) can provide more comprehensive insights. This integration makes spatial analysis and modeling more effective, especially for disaster monitoring and environmental assessment.
+
