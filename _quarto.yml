@@ -17,7 +17,9 @@ book:
     - week9.qmd
     - references.qmd
 
-bibliography: references.bib
+bibliography: reference_diary.bib
+csl: harvard.csl
+link-citations: true
 
 format:
   html:

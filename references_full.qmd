@@ -1,0 +1,48 @@
+---
+
+title: "References"
+
+format: html
+
+---
+
+
+
+## 📚 References
+
+
+
+<span id="Kabisch2014"></span>  
+**Kabisch, N. & Haase, D. (2014).** Green justice or just green? Provision of urban green spaces in Berlin, Germany. *Landscape and Urban Planning*, 122, 129–139.
+
+
+<span id="Immitzer2016"></span>  
+**Immitzer, M., Vuolo, F. & Atzberger, C. (2016).** First experience with Sentinel-2 data for crop and tree species classifications in central Europe. *Remote Sensing*, 8(3), 166.
+
+
+<span id="Gorelick2017"></span>  
+**Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D. & Moore, R. (2017).** Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote Sensing of Environment*, 202, 18–27.
+
+
+<span id="Amani2020"></span>  
+**Amani, M., Ghorbanian, A., Ahmadi, S.A. et al. (2020).** Google Earth Engine Cloud Computing Platform for Remote Sensing Big Data Applications: A Comprehensive Review. *IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing*, 13, 5326–5350.
+
+
+<span id="Kochenour2020"></span>  
+**Kochenour, C. (2020).** Remote Sensing with Google Earth Engine. *Online Resource*, , .
+
+
+<span id="Jensen2015"></span>  
+**Jensen, J.R. (2015).** Introductory Digital Image Processing: A Remote Sensing Perspective. *Prentice-Hall Inc.*, , .
+
+
+<span id="Pal2005"></span>  
+**Pal, M. & Mather, P.M. (2005).** Support vector machines for classification in remote sensing. *International Journal of Remote Sensing*, 26(5), 1007–1011.
+
+
+<span id="GISGeography2014"></span>  
+**GISGeography (2014).** Image Classification Techniques in Remote Sensing. *Accessed 1.5.23*, , .
+
+
+<span id="Barsi2018"></span>  
+**Barsi, Á., Kugler, Z., László, I., Szabó, G. & Abdulmutalib, H. (2018).** Accuracy dimensions in remote sensing. *International Archives of the Photogrammetry, Remote Sensing & Spatial Information Sciences*, 42, .

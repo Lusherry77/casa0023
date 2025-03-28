@@ -44,23 +44,23 @@ This week made me realise that classification isn’t just technical—it’s a 
 
 In the GEE practical, we used supervised classification with CART. We collected training data for classes like vegetation, urban, and water, trained the model using .train(), then applied .classify() and assessed results with a confusion matrix.
 
-This matched the supervised workflow described in Jensen (2015, Ch. 9), where classification depends heavily on representative training data. Even small spatial bias in our samples—like too few water points—led to frequent misclassification.
+This matched the supervised workflow described in @Jensen2015, where classification depends heavily on representative training data. Even small spatial bias in our samples—like too few water points—led to frequent misclassification.
 
 ### Comparing classifiers: CART, SVM, Random Forest
 
 CART is easy to implement, but prone to overfitting. Random Forest addresses this by aggregating many trees with bootstrapped samples. SVMs are more precise in defining boundaries but require careful tuning.
 
-In urban contexts, these methods have been applied to identify informal settlements, vegetation fragmentation, and impervious surfaces (GISGeography, 2014; Pal & Mather, 2005).
+In urban contexts, these methods have been applied to identify informal settlements, vegetation fragmentation, and impervious surfaces [@GISGeography2014; @Pal2005].
 
 ### Accuracy isn’t just a number
 
 The confusion matrix gives a surface-level view of accuracy—but it’s highly sensitive to sample size, class imbalance, and label quality. I realised that changing just a few training points can “improve” accuracy artificially.
 
-This connects to Barsi et al. (2018), who argue that thematic accuracy is multidimensional, involving sampling, classification logic, and even post-processing.
+This connects to [@Barsi2018], who argue that thematic accuracy is multidimensional, involving sampling, classification logic, and even post-processing.
 
 ### Beyond pixels: can classification be smarter?
 
-Unsupervised methods like K-means are useful in data-scarce settings, but hard to interpret. Jensen (2015, Ch. 10) also describes “expert systems” that embed domain logic into classification—suggesting potential for hybrid models.
+Unsupervised methods like K-means are useful in data-scarce settings, but hard to interpret. @Jensen2015 also describes “expert systems” that embed domain logic into classification—suggesting potential for hybrid models.
 
 This made me think: can we move beyond purely spectral classification, especially in cities where land cover types are defined by social and spatial context?
 

@@ -1,4 +1,10 @@
-# References {.unnumbered}
+---
+title: "References"
+format: html
+bibliography: reference_diary.bib  # 引用你的 bib 文件名
+csl: harvard.csl        # 或其他样式，如 harvard.csl，可选
+nocite: |
+  @*
+---
 
-::: {#refs}
-:::
+

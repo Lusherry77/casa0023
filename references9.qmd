@@ -1,0 +1,36 @@
+---
+
+title: "References"
+
+format: html
+
+---
+
+
+
+## 📚 References
+
+
+
+<span id="Kabisch2014"></span>  
+**Kabisch, N. & Haase, D. (2014).** Green justice or just green? Provision of urban green spaces in Berlin, Germany. *Landscape and Urban Planning*, 122, 129–139.
+
+
+<span id="Immitzer2016"></span>  
+**Immitzer, M., Vuolo, F. & Atzberger, C. (2016).** First experience with Sentinel-2 data for crop and tree species classifications. *Remote Sensing*, 8(3), 166.
+
+
+<span id="Gorelick2017"></span>  
+**Gorelick, N. et al. (2017).** Google Earth Engine: Planetary-scale geospatial analysis for everyone. *Remote Sensing of Environment*, 202, 18–27.
+
+
+<span id="Amani2020"></span>  
+**Amani, M. et al. (2020).** Google Earth Engine Cloud Computing Platform for Remote Sensing Big Data Applications: A Comprehensive Review. *IEEE J-STARS*, 13, 5326–5350.
+
+
+<span id="Kochenour2020"></span>  
+**Kochenour, C. (2020).** Remote Sensing with Google Earth Engine. *Online Resource*, , .
+
+
+<span id="Jensen2015"></span>  
+**Jensen, J.R. (2015).** Introductory Digital Image Processing: A Remote Sensing Perspective. *Prentice-Hall Inc.*, , .

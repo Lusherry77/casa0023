@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -145,19 +164,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Temperature</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -200,14 +225,14 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
-<p>This week focused on Google Earth Engine (GEE), a cloud-based platform designed for planetary-scale geospatial analysis. Unlike desktop tools, GEE allows users to run spatial queries on petabytes of remote sensing data entirely in the cloud. The platform includes datasets like Landsat, MODIS, Sentinel, and various climate records, enabling long-term monitoring of urbanisation, vegetation, land degradation, and climate risks (Gorelick et al., 2017).</p>
-<p>We were introduced to the core components of the GEE environment, including object-based elements like ee.Image, ee.ImageCollection, and ee.FeatureCollection, and learned how to filter, map, and reduce them using server-side computation. One key concept was the difference between client- and server-side code, which directly impacts performance. Functions like reduceRegion(), linearFit(), or reduceNeighborhood() allow users to run spatial statistics, temporal trends, and neighbourhood-based analysis without ever downloading data (Kochenour, 2020).</p>
-<p>A major advantage of GEE is scalability—large area analysis across time becomes fast, reproducible, and shareable. Its open-access model and “analysis-ready” workflow have made it foundational in urban, ecological, and climate-focused remote sensing applications (Amani et al., 2020). However, working with GEE also requires attention to pixel scale, projection systems, and memory limits. While powerful, its reliance on scripting can be a barrier in some policy or NGO settings.Still, it represents a major shift from traditional GIS towards cloud-native, globally distributed geospatial science. As remote sensing moves from data scarcity to processing overload, platforms like GEE will be central to scalable, reproducible and policy-relevant Earth Observation workflows (Gorelick et al., 2017; Amani et al., 2020).</p>
+<p>This week focused on Google Earth Engine (GEE), a cloud-based platform designed for planetary-scale geospatial analysis. Unlike desktop tools, GEE allows users to run spatial queries on petabytes of remote sensing data entirely in the cloud. The platform includes datasets like Landsat, MODIS, Sentinel, and various climate records, enabling long-term monitoring of urbanisation, vegetation, land degradation, and climate risks <span class="citation" data-cites="Gorelick2017">(<a href="#ref-Gorelick2017" role="doc-biblioref">Gorelick et al., 2017</a>)</span>.</p>
+<p>We were introduced to the core components of the GEE environment, including object-based elements like ee.Image, ee.ImageCollection, and ee.FeatureCollection, and learned how to filter, map, and reduce them using server-side computation. One key concept was the difference between client- and server-side code, which directly impacts performance. Functions like reduceRegion(), linearFit(), or reduceNeighborhood() allow users to run spatial statistics, temporal trends, and neighbourhood-based analysis without ever downloading data <span class="citation" data-cites="Kochenour2020">(<a href="#ref-Kochenour2020" role="doc-biblioref">Kochenour, 2020</a>)</span>.</p>
+<p>A major advantage of GEE is scalability—large area analysis across time becomes fast, reproducible, and shareable. Its open-access model and “analysis-ready” workflow have made it foundational in urban, ecological, and climate-focused remote sensing applications <span class="citation" data-cites="Amani2020">(<a href="#ref-Amani2020" role="doc-biblioref">Amani et al., 2020</a>)</span>. However, working with GEE also requires attention to pixel scale, projection systems, and memory limits. While powerful, its reliance on scripting can be a barrier in some policy or NGO settings.Still, it represents a major shift from traditional GIS towards cloud-native, globally distributed geospatial science. As remote sensing moves from data scarcity to processing overload, platforms like GEE will be central to scalable, reproducible and policy-relevant Earth Observation workflows <span class="citation" data-cites="Gorelick2017 Amani2020">(<a href="#ref-Gorelick2017" role="doc-biblioref">Gorelick et al., 2017</a>; <a href="#ref-Amani2020" role="doc-biblioref">Amani et al., 2020</a>)</span>.</p>
 </section>
 <section id="applications" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
-<p>Google Earth Engine (GEE) enables not just fast processing, but analytical depth—especially when moving beyond surface-level indices like NDVI. This week’s session introduced us to functions like reduceRegion(), reduceNeighborhood(), and band math operations, which have been applied in urban contexts to quantify green space quality, monitor land degradation, and detect micro-level temperature anomalies. In particular, the use of neighborhood-based reducers has helped researchers move from pixel-based averages to spatial texture metrics, capturing intra-urban heterogeneity such as informal housing patterns and patchy vegetation (Kochenour, 2020). One study combined this method with census layers to explore environmental inequality across Indian megacities—revealing that “greenness gaps” often align with caste and income divides (Amani et al., 2020). These approaches show that the strength of GEE lies not only in speed or scale, but in its capacity to link environmental signals to structural urban injustices.</p>
-<p>Several other studies go further by integrating dimensionality reduction techniques such as PCA or tasseled cap transformations. These are used to extract spectral change trends or vegetation “complexity” in cities, and when combined with unsupervised clustering or temporal smoothing, enable long-term urban classification without the need for pre-labelled data (Gorelick et al., 2017). For example, in a workflow used for flood-prone slums in Jakarta, analysts used GEE to mask out built-up noise, isolate seasonal NDWI peaks, and classify chronic inundation zones without field data. This kind of flexible masking and multi-date filtering is also central to climate risk dashboards used by UN-Habitat and the World Bank. As more urban policy teams rely on Earth Observation to monitor SDG progress or heat mitigation plans, the demand for scalable, interpretable and well-documented workflows will likely grow. GEE provides not just the tools, but a shared language for that transition.</p>
+<p>GEE enables not just fast processing, but analytical depth—especially when moving beyond surface-level indices like NDVI. This week’s session introduced us to functions like reduceRegion(), reduceNeighborhood(), and band math operations, which have been applied in urban contexts to quantify green space quality, monitor land degradation, and detect micro-level temperature anomalies. In particular, the use of neighborhood-based reducers has helped researchers move from pixel-based averages to spatial texture metrics, capturing intra-urban heterogeneity such as informal housing patterns and patchy vegetation <span class="citation" data-cites="Kochenour2020">(<a href="#ref-Kochenour2020" role="doc-biblioref">Kochenour, 2020</a>)</span>. One study combined this method with census layers to explore environmental inequality across Indian megacities—revealing that “greenness gaps” often align with caste and income divides <span class="citation" data-cites="Amani2020">(<a href="#ref-Amani2020" role="doc-biblioref">Amani et al., 2020</a>)</span>. These approaches show that the strength of GEE lies not only in speed or scale, but in its capacity to link environmental signals to structural urban injustices.</p>
+<p>Several other studies go further by integrating dimensionality reduction techniques such as PCA or tasseled cap transformations. These are used to extract spectral change trends or vegetation “complexity” in cities, and when combined with unsupervised clustering or temporal smoothing, enable long-term urban classification without the need for pre-labelled data <span class="citation" data-cites="Gorelick2017">(<a href="#ref-Gorelick2017" role="doc-biblioref">Gorelick et al., 2017</a>)</span>. For example, in a workflow used for flood-prone slums in Jakarta, analysts used GEE to mask out built-up noise, isolate seasonal NDWI peaks, and classify chronic inundation zones without field data. This kind of flexible masking and multi-date filtering is also central to climate risk dashboards used by UN-Habitat and the World Bank. As more urban policy teams rely on Earth Observation to monitor SDG progress or heat mitigation plans, the demand for scalable, interpretable and well-documented workflows will likely grow. GEE provides not just the tools, but a shared language for that transition.</p>
 </section>
 <section id="reflection" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
@@ -215,6 +240,17 @@ ul.task-list li input[type="checkbox"] {
 <p>At the same time, I was genuinely impressed by what’s possible. Running a time series regression across years of data in just a few seconds felt like cheating. And it wasn’t just about speed—it was how GEE made me think differently. Not just about pixels, but about systems: about who gets to use these tools, whose data questions are answered, and who can challenge the results. GEE makes urban analysis scalable, but that scale also comes with responsibility. The fact that so much of the processing happens in the cloud makes it easy to forget the assumptions we’re building into our workflows—projection, scale, reducers, thresholds. This week made me realise that the map isn’t the final answer—it’s a story we choose to tell. And if I want to use GEE in policy one day, I’ll need to be as critical of my own scripts as I am of someone else’s dashboard.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Amani2020" class="csl-entry" role="listitem">
+Amani, M., Ghorbanian, A., Ahmadi, S.A. and others 2020. Google earth engine cloud computing platform for remote sensing big data applications: A comprehensive review. <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em>. <strong>13</strong>, pp.5326–5350.
+</div>
+<div id="ref-Gorelick2017" class="csl-entry" role="listitem">
+Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D. and Moore, R. 2017. Google earth engine: Planetary-scale geospatial analysis for everyone. <em>Remote Sensing of Environment</em>. <strong>202</strong>, pp.18–27.
+</div>
+<div id="ref-Kochenour2020" class="csl-entry" role="listitem">
+Kochenour, C. 2020. <em>Remote sensing with google earth engine</em>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -642,8 +678,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week7.html" class="pagination-link" aria-label="Week 7 - Classification II">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week7.html" class="pagination-link" aria-label="Classification I">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

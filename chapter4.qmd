@@ -2,14 +2,13 @@
 
 ## Summary
 
-The Ahmedabad Heat Action Plan (HAP) is the first comprehensive heat-health policy implemented in South Asia. Ahmedabad, a rapidly urbanising city in Gujarat, India, experienced a deadly heatwave in 2010 that led to over 1,300 excess deaths. In response, the city partnered with public health experts, meteorologists, and urban planners to launch a pioneering plan to reduce heat-related mortality and build long-term climate resilience (Knowlton et al., 2014).
+The Ahmedabad Heat Action Plan (HAP) is the first comprehensive heat-health policy implemented in South Asia. Ahmedabad, a rapidly urbanising city in Gujarat, India, experienced a deadly heatwave in 2010 that led to over 1,300 excess deaths. In response, the city partnered with public health experts, meteorologists, and urban planners to launch a pioneering plan to reduce heat-related mortality and build long-term climate resilience [@Knowlton2014].
 
 The policy includes a multi-pronged strategy: early warning systems based on temperature forecasts, public education campaigns to increase heat risk awareness, training for medical professionals, and the establishment of “cooling spaces” such as temples and public buildings. One of its most important goals is to prioritise vulnerable populations, particularly the elderly, informal workers, and residents of low-income, high-density areas.
 
 Ahmedabad’s urban form—high impervious surface cover, limited green space, and dense informal settlements—makes it particularly vulnerable to Urban Heat Island (UHI) effects. While the HAP does not explicitly reference Earth Observation (EO) data, many of its components, like hotspot mapping and monitoring of intervention effectiveness, could benefit from remotely sensed inputs. The plan has since been adapted in several Indian cities, and it aligns closely with international goals like SDG 3 (Good Health and Well-being), SDG 11 (Sustainable Cities), and SDG 13 (Climate Action).
 
 I found it compelling that this policy treats extreme heat not only as a weather issue, but as a public health and equity concern. It shows how spatial data, urban planning, and healthcare can come together to respond to the complex challenge of climate-driven risks in cities.
-
 
 ## Applications
 
@@ -19,16 +18,15 @@ A key policy gap in Ahmedabad’s Heat Action Plan is the lack of spatially deta
 
 ### Solution: Using MODIS LST to Detect Urban Heat Patterns
 
-MODIS Land Surface Temperature (LST) offers a valuable dataset to address this gap. With its near-daily temporal resolution and 1 km spatial coverage, MODIS enables continuous monitoring of urban heat islands (UHI). These data can be used to build heat vulnerability maps that combine temperature with population density, housing quality or informal settlement locations—helping target cooling centres or emergency services (Wellmann et al., 2020).
- 
+MODIS Land Surface Temperature (LST) offers a valuable dataset to address this gap. With its near-daily temporal resolution and 1 km spatial coverage, MODIS enables continuous monitoring of urban heat islands (UHI). These data can be used to build heat vulnerability maps that combine temperature with population density, housing quality or informal settlement locations—helping target cooling centres or emergency services [@Wellmann2020].
+
 ### Evaluation: Measuring the Impact of Cooling Policies
 
-MODIS LST is also useful for evaluating the effectiveness of interventions. For example, after installing green roofs or tree cover, the same dataset can be used to track whether the targeted neighbourhoods are actually cooling over time. This helps cities move toward evidence-based, adaptive planning (Gerasopoulos et al., 2022). 
+MODIS LST is also useful for evaluating the effectiveness of interventions. For example, after installing green roofs or tree cover, the same dataset can be used to track whether the targeted neighbourhoods are actually cooling over time. This helps cities move toward evidence-based, adaptive planning [@Gerasopoulos2022].
 
 ### Broader Value: Affordable, Scalable, Policy-Aligned
 
-Unlike ground monitoring networks, which are costly and sparse, MODIS provides open-access, globally consistent data—making urban heat tracking feasible even in resource-limited cities. This approach doesn’t replace local knowledge but enhances it. By integrating such data, Ahmedabad’s HAP contributes to SDG 11 (Sustainable Cities) and SDG 13 (Climate Action) while building a more inclusive and data-driven governance system (Li et al., 2022).
-
+Unlike ground monitoring networks, which are costly and sparse, MODIS provides open-access, globally consistent data—making urban heat tracking feasible even in resource-limited cities. This approach doesn’t replace local knowledge but enhances it. By integrating such data, Ahmedabad’s HAP contributes to SDG 11 (Sustainable Cities) and SDG 13 (Climate Action) while building a more inclusive and data-driven governance system [@Li2022].
 
 ## Reflection
 

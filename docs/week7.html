@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -163,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -250,21 +269,21 @@ ul.task-list li input[type="checkbox"] {
 <section id="supervised-classification-in-practice" class="level3" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="supervised-classification-in-practice"><span class="header-section-number">6.2.1</span> Supervised classification in practice</h3>
 <p>In the GEE practical, we used supervised classification with CART. We collected training data for classes like vegetation, urban, and water, trained the model using .train(), then applied .classify() and assessed results with a confusion matrix.</p>
-<p>This matched the supervised workflow described in Jensen (2015, Ch. 9), where classification depends heavily on representative training data. Even small spatial bias in our samples—like too few water points—led to frequent misclassification.</p>
+<p>This matched the supervised workflow described in <span class="citation" data-cites="Jensen2015">Jensen (<a href="#ref-Jensen2015" role="doc-biblioref">2015</a>)</span>, where classification depends heavily on representative training data. Even small spatial bias in our samples—like too few water points—led to frequent misclassification.</p>
 </section>
 <section id="comparing-classifiers-cart-svm-random-forest" class="level3" data-number="6.2.2">
 <h3 data-number="6.2.2" class="anchored" data-anchor-id="comparing-classifiers-cart-svm-random-forest"><span class="header-section-number">6.2.2</span> Comparing classifiers: CART, SVM, Random Forest</h3>
 <p>CART is easy to implement, but prone to overfitting. Random Forest addresses this by aggregating many trees with bootstrapped samples. SVMs are more precise in defining boundaries but require careful tuning.</p>
-<p>In urban contexts, these methods have been applied to identify informal settlements, vegetation fragmentation, and impervious surfaces (GISGeography, 2014; Pal &amp; Mather, 2005).</p>
+<p>In urban contexts, these methods have been applied to identify informal settlements, vegetation fragmentation, and impervious surfaces <span class="citation" data-cites="GISGeography2014 Pal2005">(<a href="#ref-Pal2005" role="doc-biblioref">Pal and Mather, 2005</a>; <a href="#ref-GISGeography2014" role="doc-biblioref">GISGeography, 2014</a>)</span>.</p>
 </section>
 <section id="accuracy-isnt-just-a-number" class="level3" data-number="6.2.3">
 <h3 data-number="6.2.3" class="anchored" data-anchor-id="accuracy-isnt-just-a-number"><span class="header-section-number">6.2.3</span> Accuracy isn’t just a number</h3>
 <p>The confusion matrix gives a surface-level view of accuracy—but it’s highly sensitive to sample size, class imbalance, and label quality. I realised that changing just a few training points can “improve” accuracy artificially.</p>
-<p>This connects to Barsi et al.&nbsp;(2018), who argue that thematic accuracy is multidimensional, involving sampling, classification logic, and even post-processing.</p>
+<p>This connects to <span class="citation" data-cites="Barsi2018">(<a href="#ref-Barsi2018" role="doc-biblioref">Barsi et al., 2018</a>)</span>, who argue that thematic accuracy is multidimensional, involving sampling, classification logic, and even post-processing.</p>
 </section>
 <section id="beyond-pixels-can-classification-be-smarter" class="level3" data-number="6.2.4">
 <h3 data-number="6.2.4" class="anchored" data-anchor-id="beyond-pixels-can-classification-be-smarter"><span class="header-section-number">6.2.4</span> Beyond pixels: can classification be smarter?</h3>
-<p>Unsupervised methods like K-means are useful in data-scarce settings, but hard to interpret. Jensen (2015, Ch. 10) also describes “expert systems” that embed domain logic into classification—suggesting potential for hybrid models.</p>
+<p>Unsupervised methods like K-means are useful in data-scarce settings, but hard to interpret. <span class="citation" data-cites="Jensen2015">Jensen (<a href="#ref-Jensen2015" role="doc-biblioref">2015</a>)</span> also describes “expert systems” that embed domain logic into classification—suggesting potential for hybrid models.</p>
 <p>This made me think: can we move beyond purely spectral classification, especially in cities where land cover types are defined by social and spatial context?</p>
 </section>
 </section>
@@ -275,6 +294,20 @@ ul.task-list li input[type="checkbox"] {
 <p>I still think these tools are powerful, especially in big-scale urban monitoring. But I’m starting to pay more attention to the invisible stuff: what gets included, what gets left out, and how much we actually trust these results when they’re used to inform planning or policy.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Barsi2018" class="csl-entry" role="listitem">
+Barsi, Á., Kugler, Z., László, I., Szabó, G. and Abdulmutalib, H. 2018. Accuracy dimensions in remote sensing <em>In</em>: <em>International archives of the photogrammetry, remote sensing &amp; spatial information sciences</em>.
+</div>
+<div id="ref-GISGeography2014" class="csl-entry" role="listitem">
+GISGeography 2014. Image classification techniques in remote sensing.
+</div>
+<div id="ref-Jensen2015" class="csl-entry" role="listitem">
+Jensen, J.R. 2015. <em>Introductory digital image processing: A remote sensing perspective</em>. Prentice-Hall Inc.
+</div>
+<div id="ref-Pal2005" class="csl-entry" role="listitem">
+Pal, M. and Mather, P.M. 2005. Support vector machines for classification in remote sensing. <em>International Journal of Remote Sensing</em>. <strong>26</strong>(5), pp.1007–1011.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
