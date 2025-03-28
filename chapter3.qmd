@@ -1,1 +1,37 @@
-# Week 3 - Corrections
+# Corrections
+
+## Summary
+
+This week focused on the essential preprocessing steps required to transform raw satellite imagery into reliable and analysis-ready data. We covered four main types of correction: geometric correction, atmospheric correction, Orthorectification correction and Radiometric Calibration.
+
+### 📐Geometric Correction
+
+Geometric correction aligns satellite images to real-world coordinates using Ground Control Points (GCPs) and transformation models. It ensures spatial accuracy for overlays and time series comparison. Even a small spatial misalignment can impact multi-date analysis or fusion with GIS layers.
+
+### 🌫Atmospheric Correction
+
+Atmospheric correction accounts for the effects of gases, aerosols, and scattering. In the practical, we applied the Dark Object Subtraction (DOS) method, which assumes that some dark pixels should have near-zero reflectance. Even small amounts of haze can distort NDVI or land cover classification results, so this step is crucial.
+
+### 🏔Topographic Correction
+
+Topographic correction normalizes the effects of slope and aspect on reflectance, especially in hilly or mountainous areas. Methods like C-correction or Minnaert are used to adjust for terrain-induced illumination differences.
+
+### 🚀Radiometric Correction
+
+Radiometric correction adjusts for sensor noise and converts raw digital numbers (DN) to physical reflectance values using sensor calibration coefficients. This step is important for comparing data across sensors or time. Although simple in concept, it forms the foundation for any quantitative remote sensing work.
+
+## Applications
+
+This week’s practical pushed me to think beyond the interface and question what makes remote sensing outputs trustworthy. Preprocessing steps like terrain or geometric correction are often treated as minor, even optional. But in practice, they shape what becomes visible, measurable, and eventually actionable.For example, areas with even modest slopes can create shadows that suppress reflectance values in predictable ways—especially under low sun angles. If uncorrected, shaded but vegetated land can appear barren. That’s not just a misreading—it changes how we perceive ecological risk or urban green gaps. In cities where greening policies are spatially targeted, these distortions affect who gets counted and where resources go (Pandey et al., 2021; Shahtahmassebi et al., 2016). It’s easy to assume such errors only matter in mountains, but this week made me realise that topographic misrepresentation is more pervasive than I thought.
+
+The same applies to geometric correction. In our QGIS exercise, I realised how just a few misaligned pixels could fabricate a “change” over time. In policy settings, such pseudo-change can mislead everything from slum mapping to land tenure disputes to disaster damage assessments (Taubenböck et al., 2012). If informal housing shifts on a map due to poor alignment, it could be wrongly excluded from an infrastructure plan—or wrongly targeted for demolition.
+
+What troubles me most is that these decisions—resampling kernel, DEM use, GCP placement—are almost never documented in published maps or reports. The outputs are presented as objective layers, but the preprocessing that shaped them stays invisible. This week reframed how I see remote sensing. The map isn’t the territory—and preprocessing isn’t neutral. If left unexamined, it doesn’t just introduce error—it embeds bias that travels across time, space, and decisions (Brovelli et al., 2020).
+
+## Reflection
+
+This week changed how I think about what satellite data actually is. I used to imagine remote sensing as a clean, visual layer—like a map you just open and read. But when we started manually applying corrections in QGIS, I realised how much “data preparation” is really about decision-making. It surprised me how sensitive the data is: just changing the resampling method or skipping a terrain correction can completely alter how land surfaces appear.
+
+What stood out most was the practical tension between accuracy and accessibility. On the one hand, it’s empowering to know that we can apply these corrections ourselves and improve the reliability of the data. On the other hand, I started wondering how often these steps are skipped in large-scale studies or open datasets. If preprocessing is hidden or inconsistent, then maps that look precise might actually be full of embedded assumptions.
+
+For my own work, I can see these tools being useful—not just the software, but the mindset of questioning what lies behind each image. Even something as simple as identifying a “dark object” isn’t straightforward in urban areas full of complex shadows and materials. This week reminded me that every pixel is a product of processing choices. If we don’t stay critical of those choices, we risk reading more into the data than is really there.

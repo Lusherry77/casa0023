@@ -1,1 +1,36 @@
-# Week 8 - Temperature
+# Classification II
+
+## Summary
+
+This week built on our previous understanding of supervised classification, but shifted the focus from running models to evaluating them critically. In the lecture, we compared three machine learning classifiers—CART, Random Forest, and SVM—using the same Sentinel-2 imagery and training classes (urban, water, vegetation). While all three can be applied within Google Earth Engine using .train() and .classify(), their behaviours and outputs were quite different. CART is easy to interpret but tends to overfit. Random Forest performs better with imbalanced or noisy data, but lacks transparency. SVM provides clean decision boundaries, especially for binary or small datasets, but is more sensitive to parameter settings.
+
+A major part of this week’s learning involved accuracy assessment. We used .randomColumn() to split training and validation samples, then evaluated model performance using confusion matrices. These gave us common metrics like Overall Accuracy, Producer’s Accuracy, and User’s Accuracy—but also showed that these numbers could vary based on sample size, category balance, and geographic distribution. It reminded me that “high accuracy” might not always mean “good classification”.
+
+In the practical, we applied all three classifiers to the same dataset and directly compared the results. Even though the maps looked similar from a distance, they showed meaningful differences in boundaries, class mixing, and misclassified regions. The process made it clear that classification isn’t just about picking a method—it’s about understanding how data, model, and design decisions interact to shape the final outcome.
+
+## Applications
+
+### Classifying by groups, not pixels
+
+In this week’s practical, we used pixel-based classification, but I’ve learned that it doesn’t always work well in messy urban areas. A growing number of studies now use object-based image analysis (OBIA), where the algorithm looks at clusters of pixels instead of treating each one alone. For example, OBIA was used in a recent Google Earth Engine (GEE) study combining Sentinel-1, Sentinel-2 and PlanetScope data to identify informal settlements. By grouping pixels into meaningful objects, they could more accurately distinguish buildings from roads or vegetation—something pixel-level methods often misclassify (Matarira et al., 2023).
+ 
+### When one pixel isn’t just one thing
+
+Another thing I hadn’t thought about much before is how mixed many pixels are—especially around the edges of urban and natural features. A pixel might contain 40% grass and 60% road, but most classifiers still force it into just one category. This is where sub-pixel classification and spectral mixture models are useful. These techniques let us estimate what proportion of each land cover type exists inside a pixel (Foody, 2004). While GEE doesn’t yet directly support full unmixing workflows, researchers have implemented simplified versions using band ratios and linear regressions (Jensen, 2015).
+
+### Accuracy is trickier than it looks
+
+We often evaluate classification performance using a confusion matrix, but I’ve learned that this can be misleading. For example, if training and validation samples are placed too close together, spatial autocorrelation can inflate the accuracy score without truly improving the model (Karasiak et al., 2022). In our own practical, changing just a few training points noticeably shifted the results. And when one class—like “water”—has very few samples, user accuracy can drop even if the overall accuracy stays high. These issues support the view that accuracy isn’t just a number—it depends on thoughtful sample design, spatial distribution, and balanced class selection (Barsi et al., 2018).
+ 
+### Classification is just the start
+
+In many real-world use cases, classification isn’t the end goal—it’s a step toward detecting changes over time. For instance, urban growth or deforestation can be tracked by applying the same classification logic to imagery from multiple dates. But if your classifier uses different training data or sample logic across dates, you might “see” change that’s actually just inconsistency in your method. Even small changes to how we define training points can distort change detection (Jensen, 2015). That’s why in projects linked to policy—like SDG monitoring or climate resilience—it’s crucial to keep classification workflows consistent and reproducible.
+
+
+## Reflection
+
+This week deepened my understanding of how remote sensing classification applies to real urban issues. Whether it’s monitoring informal settlement growth, mapping tree cover loss, or identifying surface changes after extreme weather, I realised that the classification method we choose can directly influence how cities are understood—and governed.
+
+In our practical, I saw how small changes in sample selection could shift the whole classification result. This makes me think twice about using off-the-shelf land cover maps in city research. Unless we know how training data was collected and how balanced the classes were, it’s risky to draw conclusions from a final “map”. The confusion matrix gives numbers, but not the full story. I now see why some urban planners still hesitate to rely on EO-based classifications without careful review.
+
+One thing that stayed with me is how important consistency is across time. In policy-oriented work—like tracking urban SDGs or climate adaptation zones—we can’t afford to let each year’s classification use different rules. That would make change detection meaningless. From now on, I’ll be more critical not just about accuracy, but about the transparency and repeatability of the workflows behind the scenes.

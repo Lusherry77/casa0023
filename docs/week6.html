@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Week 6 - Classification I – CASA0023 Learning Diary</title>
+<title>5&nbsp; Google Earth Engine – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,13 +109,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1 - Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,19 +127,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -165,15 +165,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">5.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.3</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></h1>
 </div>
 
 
@@ -190,8 +198,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
+<p>This week focused on Google Earth Engine (GEE), a cloud-based platform designed for planetary-scale geospatial analysis. Unlike desktop tools, GEE allows users to run spatial queries on petabytes of remote sensing data entirely in the cloud. The platform includes datasets like Landsat, MODIS, Sentinel, and various climate records, enabling long-term monitoring of urbanisation, vegetation, land degradation, and climate risks (Gorelick et al., 2017).</p>
+<p>We were introduced to the core components of the GEE environment, including object-based elements like ee.Image, ee.ImageCollection, and ee.FeatureCollection, and learned how to filter, map, and reduce them using server-side computation. One key concept was the difference between client- and server-side code, which directly impacts performance. Functions like reduceRegion(), linearFit(), or reduceNeighborhood() allow users to run spatial statistics, temporal trends, and neighbourhood-based analysis without ever downloading data (Kochenour, 2020).</p>
+<p>A major advantage of GEE is scalability—large area analysis across time becomes fast, reproducible, and shareable. Its open-access model and “analysis-ready” workflow have made it foundational in urban, ecological, and climate-focused remote sensing applications (Amani et al., 2020). However, working with GEE also requires attention to pixel scale, projection systems, and memory limits. While powerful, its reliance on scripting can be a barrier in some policy or NGO settings.Still, it represents a major shift from traditional GIS towards cloud-native, globally distributed geospatial science. As remote sensing moves from data scarcity to processing overload, platforms like GEE will be central to scalable, reproducible and policy-relevant Earth Observation workflows (Gorelick et al., 2017; Amani et al., 2020).</p>
+</section>
+<section id="applications" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.2</span> Applications</h2>
+<p>Google Earth Engine (GEE) enables not just fast processing, but analytical depth—especially when moving beyond surface-level indices like NDVI. This week’s session introduced us to functions like reduceRegion(), reduceNeighborhood(), and band math operations, which have been applied in urban contexts to quantify green space quality, monitor land degradation, and detect micro-level temperature anomalies. In particular, the use of neighborhood-based reducers has helped researchers move from pixel-based averages to spatial texture metrics, capturing intra-urban heterogeneity such as informal housing patterns and patchy vegetation (Kochenour, 2020). One study combined this method with census layers to explore environmental inequality across Indian megacities—revealing that “greenness gaps” often align with caste and income divides (Amani et al., 2020). These approaches show that the strength of GEE lies not only in speed or scale, but in its capacity to link environmental signals to structural urban injustices.</p>
+<p>Several other studies go further by integrating dimensionality reduction techniques such as PCA or tasseled cap transformations. These are used to extract spectral change trends or vegetation “complexity” in cities, and when combined with unsupervised clustering or temporal smoothing, enable long-term urban classification without the need for pre-labelled data (Gorelick et al., 2017). For example, in a workflow used for flood-prone slums in Jakarta, analysts used GEE to mask out built-up noise, isolate seasonal NDWI peaks, and classify chronic inundation zones without field data. This kind of flexible masking and multi-date filtering is also central to climate risk dashboards used by UN-Habitat and the World Bank. As more urban policy teams rely on Earth Observation to monitor SDG progress or heat mitigation plans, the demand for scalable, interpretable and well-documented workflows will likely grow. GEE provides not just the tools, but a shared language for that transition.</p>
+</section>
+<section id="reflection" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.3</span> Reflection</h2>
+<p>I didn’t expect to like GEE this much. At first, it felt overwhelming—I could understand the scripts, but editing functions or debugging still felt fragile. It made me think about how powerful tools don’t always mean accessible tools. If I struggled, how would someone in a small city office or NGO with no remote sensing background get started? GEE is amazing in what it can do, but its technical barrier can make it feel exclusive.</p>
+<p>At the same time, I was genuinely impressed by what’s possible. Running a time series regression across years of data in just a few seconds felt like cheating. And it wasn’t just about speed—it was how GEE made me think differently. Not just about pixels, but about systems: about who gets to use these tools, whose data questions are answered, and who can challenge the results. GEE makes urban analysis scalable, but that scale also comes with responsibility. The fact that so much of the processing happens in the cloud makes it easy to forget the assumptions we’re building into our workflows—projection, scale, reducers, thresholds. This week made me realise that the map isn’t the final answer—it’s a story we choose to tell. And if I want to use GEE in policy one day, I’ll need to be as critical of my own scripts as I am of someone else’s dashboard.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -613,8 +637,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter4.html" class="pagination-link" aria-label="Week 4 - Policy">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy</span></span>
+      <a href="./chapter4.html" class="pagination-link" aria-label="Policy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

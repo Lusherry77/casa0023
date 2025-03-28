@@ -24,9 +24,9 @@
     "href": "index.html",
     "title": "CASA0023 Learning Diary",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
+    "text": "Welcome\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "Preface"
+      "Welcome"
     ]
   },
   {
@@ -42,11 +42,261 @@
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Week 1 - Introduction to Remote Sensing",
+    "title": "1  Introduction to Remote Sensing",
     "section": "",
-    "text": "This is Chapter 1.\n\n1 + 1\n\n[1] 2",
+    "text": "1.1 Summary",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Week 1 - Introduction to Remote Sensing</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#applications",
+    "href": "intro.html#applications",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "1.2 Applications",
+    "text": "1.2 Applications\nWhile exploring Sentinel-2 data this week, I became curious about how basic vegetation indices like NDVI (Normalized Difference Vegetation Index) are used in real-world urban studies. NDVI is calculated using just two bands—red and near-infrared—and yet it’s widely used to map vegetation health, cover, and change. In cities, this simple index has been used to assess green space inequality, monitor urban expansion, or evaluate heat island effects. One study I looked at used NDVI to compare green space across Berlin neighbourhoods and found strong links between vegetation access and income levels (Kabisch and Haase, 2014). It was interesting to see how a relatively simple formula could contribute to complex social and environmental debates. However, this made me reflect more critically on how accurate NDVI really is. During the practical, we learned that even small factors—like haze or low sun angle—can affect reflectance values. These errors can propagate into NDVI calculations. This is why the Level 2A Sentinel-2 data we used had already undergone atmospheric correction, converting TOA (Top-of-Atmosphere) reflectance into BOA (Bottom-of-Atmosphere) reflectance. I hadn’t heard of this before, but it now seems like a key step. Without it, analysis like NDVI or land cover classification could give misleading results, especially in urban areas with shadows, mixed surfaces, and variable reflectivity.\nI also found that NDVI has limitations—it saturates in dense vegetation and doesn’t distinguish between types of green cover (e.g., parks vs. invasive plants). Some studies try to improve on this by using more complex indices or machine learning classifiers that incorporate multiple spectral bands. For example, Immitzer et al. (2016) combined BOA-corrected Sentinel-2 imagery with supervised learning to classify tree species with high accuracy.\nAnother interesting point is spatial resolution. NDVI from MODIS is very coarse (250m+), while Sentinel-2 gives us 10m pixels. Depending on the research scale, that difference can really affect what kind of pattern we’re able to see—neighbourhood-level variation vs. general city-wide trends. This made me think that NDVI is useful, but needs to be interpreted carefully, and always with an understanding of the resolution and preprocessing behind it.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#reflection",
+    "href": "intro.html#reflection",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection\nThis week changed the way I think about satellite imagery. I used to think of it as something visual and intuitive—like looking at a map(e.g. Google Earth). But when we actually started working with Sentinel-2 data, I realised how technical it really is. Even producing a basic true colour image required understanding which bands to use, their spatial resolutions, and why atmospheric correction matters. I had never thought about the difference between TOA and BOA reflectance before. BOA sounded like a small technical detail, but I now understand that without it, the data can be misleading—especially in cities, where shadows, air pollution, and reflective surfaces distort the signal.\nAnother thing that stood out to me is how sensitive satellite data is to factors I had never considered—like solar angle, cloud cover, or even the time of year. I always thought satellite data was consistent and neutral, but this week made me question that assumption. The NDVI example helped clarify this. While the formula is simple, it relies heavily on clean input data. If the red or NIR bands are affected by haze or shadows, the NDVI result can show the wrong pattern entirely. So even something that looks “easy” can go wrong quickly if you don’t know what’s going on behind the scenes. This made me think about how remote sensing is presented in research or policy reports. It’s often shown as a neat map with colours, but no one talks about the processing choices behind it. I don’t think you need to be a specialist to use EO data—but you do need to understand where errors can come from. That feels especially important if this data is being used to support decisions. This week didn’t make me an expert, but it gave me a new layer of awareness that I didn’t have before. I now look at satellite images a bit differently—less like a photo, and more like a processed dataset that comes with trade-offs.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#summary",
+    "href": "intro.html#summary",
+    "title": "1  Introduction to Remote Sensing",
+    "section": "",
+    "text": "1.1.1 What is remote sensing?\nThis week was the first session of Remote Sensing Cities and Environments. In the lecture, Andy introduced us to the foundational concepts of remote sensing, starting with NASA’s definition: acquiring information from a distance. We explored two key types of sensors: Passive (like optical cameras that rely on sunlight) and Active (like radar systems that send out their own signals and record what bounces back). This distinction is fundamental because it affects when, how, and under what conditions we can collect data.\n\n\n1.1.2 Electromagnetic radiation interacts\nWe also learned how electromagnetic radiation interacts with the Earth’s surface and atmosphere. Different wavelengths behave differently: shortwave radiation scatters easily (explaining why the sky is blue—Rayleigh scattering), while longer wavelengths can penetrate haze and even cloud cover. This is where Synthetic Aperture Radar (SAR) comes in—its ability to operate day or night and through clouds makes it invaluable for areas with frequent cloud cover or emergency mapping.\n\n\n1.1.3 Resolutions\nAnother important part of the lecture was the breakdown of the four types of resolution:\n• Spatial (how big each pixel is on the ground)\n• Spectral (how many wavelength bands are recorded)\n• Radiometric (how finely energy differences can be detected)\n• Temporal (how often an area is revisited)\nUnderstanding these helped me realise that choosing satellite data isn’t just about “better resolution”—it’s always a trade-off. For example, higher spatial resolution may mean fewer spectral bands or longer revisit times.\nIn the practical, we worked with Sentinel-2 Level 2A imagery in QGIS, focusing on the visible bands (B02, B03, B04) to create a true-colour image. We used the Identify tool to examine spectral reflectance curves, which helped us understand why different surfaces appear the way they do—vegetation reflects strongly in near-infrared, for example, while water absorbs most wavelengths. These hands-on steps helped me connect theoretical terms like “spectral signature” and “radiometric resolution” to something visual and intuitive. It felt like a good start, and also made me realise how much more there is to learn.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to Remote Sensing</span>"
+    ]
+  },
+  {
+    "objectID": "chapter4.html",
+    "href": "chapter4.html",
+    "title": "4  Policy",
+    "section": "",
+    "text": "4.1 Summary\nThe Ahmedabad Heat Action Plan (HAP) is the first comprehensive heat-health policy implemented in South Asia. Ahmedabad, a rapidly urbanising city in Gujarat, India, experienced a deadly heatwave in 2010 that led to over 1,300 excess deaths. In response, the city partnered with public health experts, meteorologists, and urban planners to launch a pioneering plan to reduce heat-related mortality and build long-term climate resilience (Knowlton et al., 2014).\nThe policy includes a multi-pronged strategy: early warning systems based on temperature forecasts, public education campaigns to increase heat risk awareness, training for medical professionals, and the establishment of “cooling spaces” such as temples and public buildings. One of its most important goals is to prioritise vulnerable populations, particularly the elderly, informal workers, and residents of low-income, high-density areas.\nAhmedabad’s urban form—high impervious surface cover, limited green space, and dense informal settlements—makes it particularly vulnerable to Urban Heat Island (UHI) effects. While the HAP does not explicitly reference Earth Observation (EO) data, many of its components, like hotspot mapping and monitoring of intervention effectiveness, could benefit from remotely sensed inputs. The plan has since been adapted in several Indian cities, and it aligns closely with international goals like SDG 3 (Good Health and Well-being), SDG 11 (Sustainable Cities), and SDG 13 (Climate Action).\nI found it compelling that this policy treats extreme heat not only as a weather issue, but as a public health and equity concern. It shows how spatial data, urban planning, and healthcare can come together to respond to the complex challenge of climate-driven risks in cities.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "chapter4.html#applications",
+    "href": "chapter4.html#applications",
+    "title": "4  Policy",
+    "section": "4.2 Applications",
+    "text": "4.2 Applications\n\n4.2.1 Policy Challenge: Localised Heat Data Is Missing\nA key policy gap in Ahmedabad’s Heat Action Plan is the lack of spatially detailed, real-time heat information. While the policy provides useful interventions—such as cooling centres and public alerts—it struggles to target the most vulnerable zones due to insufficient thermal mapping at the city scale. Without this, planners cannot prioritise where to act or evaluate whether the actions are effective.\n\n\n4.2.2 Solution: Using MODIS LST to Detect Urban Heat Patterns\nMODIS Land Surface Temperature (LST) offers a valuable dataset to address this gap. With its near-daily temporal resolution and 1 km spatial coverage, MODIS enables continuous monitoring of urban heat islands (UHI). These data can be used to build heat vulnerability maps that combine temperature with population density, housing quality or informal settlement locations—helping target cooling centres or emergency services (Wellmann et al., 2020).\n\n\n4.2.3 Evaluation: Measuring the Impact of Cooling Policies\nMODIS LST is also useful for evaluating the effectiveness of interventions. For example, after installing green roofs or tree cover, the same dataset can be used to track whether the targeted neighbourhoods are actually cooling over time. This helps cities move toward evidence-based, adaptive planning (Gerasopoulos et al., 2022).\n\n\n4.2.4 Broader Value: Affordable, Scalable, Policy-Aligned\nUnlike ground monitoring networks, which are costly and sparse, MODIS provides open-access, globally consistent data—making urban heat tracking feasible even in resource-limited cities. This approach doesn’t replace local knowledge but enhances it. By integrating such data, Ahmedabad’s HAP contributes to SDG 11 (Sustainable Cities) and SDG 13 (Climate Action) while building a more inclusive and data-driven governance system (Li et al., 2022).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "chapter4.html#reflection",
+    "href": "chapter4.html#reflection",
+    "title": "4  Policy",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection\nI’ve always known that extreme heat can be dangerous, especially in cities with poor housing conditions and limited access to cooling. But what I hadn’t thought about was how remote sensing could actually be part of the policy toolkit to deal with that risk. This week’s example from Ahmedabad gave me a more grounded understanding of how data, planning, and public health can intersect. It wasn’t the technology that surprised me, but the simplicity and pragmatism of the policy—mapping who’s most at risk, warning people early, and opening cool spaces in temples or schools. Somehow it felt both low-tech and deeply data-informed at the same time.\nAhmedabad’s approach, while simple in some ways, actually pushes the boundaries of both local and global governance. It translates climate data into neighbourhood-scale action, prioritises vulnerable populations, and connects meteorological forecasting to public health infrastructure. By integrating MODIS temperature data, the policy could evolve into a more responsive and spatially precise system. This directly supports SDG 11 (Sustainable Cities), SDG 13 (Climate Action), and SDG 3 (Health and Well-being), by linking environmental monitoring with urban resilience and social equity.\nWorking with the data made me more aware of how much policy depends on interpretation. A satellite image doesn’t mean anything until someone asks: what should we do about this? It also reminded me that the barrier is not just technology, but capacity—having people, skills, and systems in place to act on data. For me, the most valuable lesson was seeing how something as technical as thermal imagery can contribute to decisions that affect real lives. That feels both exciting and humbling.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Policy</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html",
+    "href": "week6.html",
+    "title": "5  Week 6 - Classification I",
+    "section": "",
+    "text": "5.1 Summary\nThis week focused on Google Earth Engine (GEE), a cloud-based platform designed for planetary-scale geospatial analysis. Unlike desktop tools, GEE allows users to run spatial queries on petabytes of remote sensing data entirely in the cloud. The platform includes datasets like Landsat, MODIS, Sentinel, and various climate records, enabling long-term monitoring of urbanisation, vegetation, land degradation, and climate risks (Gorelick et al., 2017).\nWe were introduced to the core components of the GEE environment, including object-based elements like ee.Image, ee.ImageCollection, and ee.FeatureCollection, and learned how to filter, map, and reduce them using server-side computation. One key concept was the difference between client- and server-side code, which directly impacts performance. Functions like reduceRegion(), linearFit(), or reduceNeighborhood() allow users to run spatial statistics, temporal trends, and neighbourhood-based analysis without ever downloading data (Kochenour, 2020).\nA major advantage of GEE is scalability—large area analysis across time becomes fast, reproducible, and shareable. Its open-access model and “analysis-ready” workflow have made it foundational in urban, ecological, and climate-focused remote sensing applications (Amani et al., 2020). However, working with GEE also requires attention to pixel scale, projection systems, and memory limits. While powerful, its reliance on scripting can be a barrier in some policy or NGO settings.Still, it represents a major shift from traditional GIS towards cloud-native, globally distributed geospatial science. As remote sensing moves from data scarcity to processing overload, platforms like GEE will be central to scalable, reproducible and policy-relevant Earth Observation workflows (Gorelick et al., 2017; Amani et al., 2020).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 6 - Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#applications",
+    "href": "week6.html#applications",
+    "title": "5  Week 6 - Classification I",
+    "section": "5.2 Applications",
+    "text": "5.2 Applications\nGoogle Earth Engine (GEE) enables not just fast processing, but analytical depth—especially when moving beyond surface-level indices like NDVI. This week’s session introduced us to functions like reduceRegion(), reduceNeighborhood(), and band math operations, which have been applied in urban contexts to quantify green space quality, monitor land degradation, and detect micro-level temperature anomalies. In particular, the use of neighborhood-based reducers has helped researchers move from pixel-based averages to spatial texture metrics, capturing intra-urban heterogeneity such as informal housing patterns and patchy vegetation (Kochenour, 2020). One study combined this method with census layers to explore environmental inequality across Indian megacities—revealing that “greenness gaps” often align with caste and income divides (Amani et al., 2020). These approaches show that the strength of GEE lies not only in speed or scale, but in its capacity to link environmental signals to structural urban injustices.\nSeveral other studies go further by integrating dimensionality reduction techniques such as PCA or tasseled cap transformations. These are used to extract spectral change trends or vegetation “complexity” in cities, and when combined with unsupervised clustering or temporal smoothing, enable long-term urban classification without the need for pre-labelled data (Gorelick et al., 2017). For example, in a workflow used for flood-prone slums in Jakarta, analysts used GEE to mask out built-up noise, isolate seasonal NDWI peaks, and classify chronic inundation zones without field data. This kind of flexible masking and multi-date filtering is also central to climate risk dashboards used by UN-Habitat and the World Bank. As more urban policy teams rely on Earth Observation to monitor SDG progress or heat mitigation plans, the demand for scalable, interpretable and well-documented workflows will likely grow. GEE provides not just the tools, but a shared language for that transition.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 6 - Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "week6.html#reflection",
+    "href": "week6.html#reflection",
+    "title": "5  Week 6 - Classification I",
+    "section": "5.3 Reflection",
+    "text": "5.3 Reflection\nI didn’t expect to like GEE this much. At first, it felt overwhelming—I could understand the scripts, but editing functions or debugging still felt fragile. It made me think about how powerful tools don’t always mean accessible tools. If I struggled, how would someone in a small city office or NGO with no remote sensing background get started? GEE is amazing in what it can do, but its technical barrier can make it feel exclusive.\nAt the same time, I was genuinely impressed by what’s possible. Running a time series regression across years of data in just a few seconds felt like cheating. And it wasn’t just about speed—it was how GEE made me think differently. Not just about pixels, but about systems: about who gets to use these tools, whose data questions are answered, and who can challenge the results. GEE makes urban analysis scalable, but that scale also comes with responsibility. The fact that so much of the processing happens in the cloud makes it easy to forget the assumptions we’re building into our workflows—projection, scale, reducers, thresholds. This week made me realise that the map isn’t the final answer—it’s a story we choose to tell. And if I want to use GEE in policy one day, I’ll need to be as critical of my own scripts as I am of someone else’s dashboard.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Week 6 - Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "chapter3.html",
+    "href": "chapter3.html",
+    "title": "3  Corrections",
+    "section": "",
+    "text": "3.1 Summary\nThis week focused on the essential preprocessing steps required to transform raw satellite imagery into reliable and analysis-ready data. We covered four main types of correction: geometric correction, atmospheric correction, Orthorectification correction and Radiometric Calibration.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#summary",
+    "href": "chapter3.html#summary",
+    "title": "3  Corrections",
+    "section": "",
+    "text": "3.1.1 📐Geometric Correction\nGeometric correction aligns satellite images to real-world coordinates using Ground Control Points (GCPs) and transformation models. It ensures spatial accuracy for overlays and time series comparison. Even a small spatial misalignment can impact multi-date analysis or fusion with GIS layers.\n\n\n3.1.2 🌫Atmospheric Correction\nAtmospheric correction accounts for the effects of gases, aerosols, and scattering. In the practical, we applied the Dark Object Subtraction (DOS) method, which assumes that some dark pixels should have near-zero reflectance. Even small amounts of haze can distort NDVI or land cover classification results, so this step is crucial.\n\n\n3.1.3 🏔Topographic Correction\nTopographic correction normalizes the effects of slope and aspect on reflectance, especially in hilly or mountainous areas. Methods like C-correction or Minnaert are used to adjust for terrain-induced illumination differences.\n\n\n3.1.4 🚀Radiometric Correction\nRadiometric correction adjusts for sensor noise and converts raw digital numbers (DN) to physical reflectance values using sensor calibration coefficients. This step is important for comparing data across sensors or time. Although simple in concept, it forms the foundation for any quantitative remote sensing work.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#applications",
+    "href": "chapter3.html#applications",
+    "title": "3  Corrections",
+    "section": "3.2 Applications",
+    "text": "3.2 Applications\nThis week’s practical pushed me to think beyond the interface and question what makes remote sensing outputs trustworthy. Preprocessing steps like terrain or geometric correction are often treated as minor, even optional. But in practice, they shape what becomes visible, measurable, and eventually actionable.For example, areas with even modest slopes can create shadows that suppress reflectance values in predictable ways—especially under low sun angles. If uncorrected, shaded but vegetated land can appear barren. That’s not just a misreading—it changes how we perceive ecological risk or urban green gaps. In cities where greening policies are spatially targeted, these distortions affect who gets counted and where resources go (Pandey et al., 2021; Shahtahmassebi et al., 2016). It’s easy to assume such errors only matter in mountains, but this week made me realise that topographic misrepresentation is more pervasive than I thought.\nThe same applies to geometric correction. In our QGIS exercise, I realised how just a few misaligned pixels could fabricate a “change” over time. In policy settings, such pseudo-change can mislead everything from slum mapping to land tenure disputes to disaster damage assessments (Taubenböck et al., 2012). If informal housing shifts on a map due to poor alignment, it could be wrongly excluded from an infrastructure plan—or wrongly targeted for demolition.\nWhat troubles me most is that these decisions—resampling kernel, DEM use, GCP placement—are almost never documented in published maps or reports. The outputs are presented as objective layers, but the preprocessing that shaped them stays invisible. This week reframed how I see remote sensing. The map isn’t the territory—and preprocessing isn’t neutral. If left unexamined, it doesn’t just introduce error—it embeds bias that travels across time, space, and decisions (Brovelli et al., 2020).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "chapter3.html#reflection",
+    "href": "chapter3.html#reflection",
+    "title": "3  Corrections",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection\nThis week changed how I think about what satellite data actually is. I used to imagine remote sensing as a clean, visual layer—like a map you just open and read. But when we started manually applying corrections in QGIS, I realised how much “data preparation” is really about decision-making. It surprised me how sensitive the data is: just changing the resampling method or skipping a terrain correction can completely alter how land surfaces appear.\nWhat stood out most was the practical tension between accuracy and accessibility. On the one hand, it’s empowering to know that we can apply these corrections ourselves and improve the reliability of the data. On the other hand, I started wondering how often these steps are skipped in large-scale studies or open datasets. If preprocessing is hidden or inconsistent, then maps that look precise might actually be full of embedded assumptions.\nFor my own work, I can see these tools being useful—not just the software, but the mindset of questioning what lies behind each image. Even something as simple as identifying a “dark object” isn’t straightforward in urban areas full of complex shadows and materials. This week reminded me that every pixel is a product of processing choices. If we don’t stay critical of those choices, we risk reading more into the data than is really there.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html",
+    "href": "week7.html",
+    "title": "6  Classification I",
+    "section": "",
+    "text": "6.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#applications",
+    "href": "week7.html#applications",
+    "title": "6  Classification I",
+    "section": "6.2 Applications",
+    "text": "6.2 Applications\n\n6.2.1 Supervised classification in practice\nIn the GEE practical, we used supervised classification with CART. We collected training data for classes like vegetation, urban, and water, trained the model using .train(), then applied .classify() and assessed results with a confusion matrix.\nThis matched the supervised workflow described in Jensen (2015, Ch. 9), where classification depends heavily on representative training data. Even small spatial bias in our samples—like too few water points—led to frequent misclassification.\n\n\n6.2.2 Comparing classifiers: CART, SVM, Random Forest\nCART is easy to implement, but prone to overfitting. Random Forest addresses this by aggregating many trees with bootstrapped samples. SVMs are more precise in defining boundaries but require careful tuning.\nIn urban contexts, these methods have been applied to identify informal settlements, vegetation fragmentation, and impervious surfaces (GISGeography, 2014; Pal & Mather, 2005).\n\n\n6.2.3 Accuracy isn’t just a number\nThe confusion matrix gives a surface-level view of accuracy—but it’s highly sensitive to sample size, class imbalance, and label quality. I realised that changing just a few training points can “improve” accuracy artificially.\nThis connects to Barsi et al. (2018), who argue that thematic accuracy is multidimensional, involving sampling, classification logic, and even post-processing.\n\n\n6.2.4 Beyond pixels: can classification be smarter?\nUnsupervised methods like K-means are useful in data-scarce settings, but hard to interpret. Jensen (2015, Ch. 10) also describes “expert systems” that embed domain logic into classification—suggesting potential for hybrid models.\nThis made me think: can we move beyond purely spectral classification, especially in cities where land cover types are defined by social and spatial context?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#reflections",
+    "href": "week7.html#reflections",
+    "title": "6  Classification I",
+    "section": "6.3 Reflections",
+    "text": "6.3 Reflections",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html",
+    "href": "week8.html",
+    "title": "7  Classification II",
+    "section": "",
+    "text": "7.1 Summary\nThis week built on our previous understanding of supervised classification, but shifted the focus from running models to evaluating them critically. In the lecture, we compared three machine learning classifiers—CART, Random Forest, and SVM—using the same Sentinel-2 imagery and training classes (urban, water, vegetation). While all three can be applied within Google Earth Engine using .train() and .classify(), their behaviours and outputs were quite different. CART is easy to interpret but tends to overfit. Random Forest performs better with imbalanced or noisy data, but lacks transparency. SVM provides clean decision boundaries, especially for binary or small datasets, but is more sensitive to parameter settings.\nA major part of this week’s learning involved accuracy assessment. We used .randomColumn() to split training and validation samples, then evaluated model performance using confusion matrices. These gave us common metrics like Overall Accuracy, Producer’s Accuracy, and User’s Accuracy—but also showed that these numbers could vary based on sample size, category balance, and geographic distribution. It reminded me that “high accuracy” might not always mean “good classification”.\nIn the practical, we applied all three classifiers to the same dataset and directly compared the results. Even though the maps looked similar from a distance, they showed meaningful differences in boundaries, class mixing, and misclassified regions. The process made it clear that classification isn’t just about picking a method—it’s about understanding how data, model, and design decisions interact to shape the final outcome.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classification II</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#applications",
+    "href": "week8.html#applications",
+    "title": "7  Classification II",
+    "section": "7.2 Applications",
+    "text": "7.2 Applications\n\n7.2.1 Classifying by groups, not pixels\nIn this week’s practical, we used pixel-based classification, but I’ve learned that it doesn’t always work well in messy urban areas. A growing number of studies now use object-based image analysis (OBIA), where the algorithm looks at clusters of pixels instead of treating each one alone. For example, OBIA was used in a recent Google Earth Engine (GEE) study combining Sentinel-1, Sentinel-2 and PlanetScope data to identify informal settlements. By grouping pixels into meaningful objects, they could more accurately distinguish buildings from roads or vegetation—something pixel-level methods often misclassify (Matarira et al., 2023).\n\n\n7.2.2 When one pixel isn’t just one thing\nAnother thing I hadn’t thought about much before is how mixed many pixels are—especially around the edges of urban and natural features. A pixel might contain 40% grass and 60% road, but most classifiers still force it into just one category. This is where sub-pixel classification and spectral mixture models are useful. These techniques let us estimate what proportion of each land cover type exists inside a pixel (Foody, 2004). While GEE doesn’t yet directly support full unmixing workflows, researchers have implemented simplified versions using band ratios and linear regressions (Jensen, 2015).\n\n\n7.2.3 Accuracy is trickier than it looks\nWe often evaluate classification performance using a confusion matrix, but I’ve learned that this can be misleading. For example, if training and validation samples are placed too close together, spatial autocorrelation can inflate the accuracy score without truly improving the model (Karasiak et al., 2022). In our own practical, changing just a few training points noticeably shifted the results. And when one class—like “water”—has very few samples, user accuracy can drop even if the overall accuracy stays high. These issues support the view that accuracy isn’t just a number—it depends on thoughtful sample design, spatial distribution, and balanced class selection (Barsi et al., 2018).\n\n\n7.2.4 Classification is just the start\nIn many real-world use cases, classification isn’t the end goal—it’s a step toward detecting changes over time. For instance, urban growth or deforestation can be tracked by applying the same classification logic to imagery from multiple dates. But if your classifier uses different training data or sample logic across dates, you might “see” change that’s actually just inconsistency in your method. Even small changes to how we define training points can distort change detection (Jensen, 2015). That’s why in projects linked to policy—like SDG monitoring or climate resilience—it’s crucial to keep classification workflows consistent and reproducible.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classification II</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#reflections",
+    "href": "week8.html#reflections",
+    "title": "7  Classification II",
+    "section": "7.3 Reflections",
+    "text": "7.3 Reflections",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classification II</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#summary",
+    "href": "week7.html#summary",
+    "title": "6  Classification I",
+    "section": "",
+    "text": "6.1.1 Why classification matters\nClassification helps convert pixel values from satellite images into meaningful land cover types (e.g. vegetation, built-up, water). This is essential for monitoring land change, urban sprawl, and ecosystem health. One real-world example mentioned in class is the use of classification by Brazilian authorities to detect illegal logging in near-real time.\n\n\n6.1.2 Classification types\nSupervised classification: Requires labelled training data (e.g. CART, Random Forest, SVM)\nUnsupervised classification: No training labels, uses clustering (e.g. K-means, ISODATA)\nCART and SVM can be more accurate, but depend heavily on good sample data.\nK-means is fast but hard to interpret.\n\n\n6.1.3 How it works in practice\nIn the GEE practical, we:\nCollected training data (water, urban, vegetation)\nUsed .train() to create a CART classifier\nApplied .classify() to generate a land cover map\nUsed a confusion matrix to assess classification accuracy\n\n\n6.1.4 Common issues\nOverfitting: Small sample sizes can lead to models that don’t generalise well\nMixed pixels: Especially common in cities (e.g. one pixel contains both road and vegetation)\n“Black box” models: Methods like Random Forest or SVM may be hard to interpret\nThis week made me realise that classification isn’t just technical—it’s a decision-making process. For example, how we define categories, choose samples, or handle spectral confusion can all affect what our map shows.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "week7.html#reflection",
+    "href": "week7.html#reflection",
+    "title": "6  Classification I",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection\nThis week made me think about classification in a different way. Before, I thought it was a technical step—pick a classifier, label some training points, press run. But when I actually started working with the samples, I realised it’s not that simple. Just deciding where to draw a polygon, or how many points to add, can totally change the outcome. The map still looks clean—but what’s underneath might not be that solid.\nIt also made me more aware of how “accuracy” can be a bit misleading. It’s easy to get a high overall score, but if your samples are unbalanced or your categories vague, it doesn’t mean the result is useful. That’s something I hadn’t really thought about before. Now I feel like classification isn’t just about getting a nice-looking map—it’s about making conscious decisions, and knowing what your choices might hide or distort.\nI still think these tools are powerful, especially in big-scale urban monitoring. But I’m starting to pay more attention to the invisible stuff: what gets included, what gets left out, and how much we actually trust these results when they’re used to inform planning or policy.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Classification I</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#reflection",
+    "href": "week8.html#reflection",
+    "title": "7  Classification II",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection\nThis week deepened my understanding of how remote sensing classification applies to real urban issues. Whether it’s monitoring informal settlement growth, mapping tree cover loss, or identifying surface changes after extreme weather, I realised that the classification method we choose can directly influence how cities are understood—and governed.\nIn our practical, I saw how small changes in sample selection could shift the whole classification result. This makes me think twice about using off-the-shelf land cover maps in city research. Unless we know how training data was collected and how balanced the classes were, it’s risky to draw conclusions from a final “map”. The confusion matrix gives numbers, but not the full story. I now see why some urban planners still hesitate to rely on EO-based classifications without careful review.\nOne thing that stayed with me is how important consistency is across time. In policy-oriented work—like tracking urban SDGs or climate adaptation zones—we can’t afford to let each year’s classification use different rules. That would make change detection meaningless. From now on, I’ll be more critical not just about accuracy, but about the transparency and repeatability of the workflows behind the scenes.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Classification II</span>"
+    ]
+  },
+  {
+    "objectID": "week9.html",
+    "href": "week9.html",
+    "title": "8  SAR",
+    "section": "",
+    "text": "8.1 Summary\nThis week focused on Synthetic Aperture Radar (SAR) and how it can be used to detect urban change, especially in high-risk or data-scarce environments. Unlike optical data, SAR uses microwave signals to actively illuminate the Earth’s surface, making it resilient to cloud cover and usable at night. We learned that SAR images represent backscatter intensity, which depends on surface geometry, moisture, and material properties. For instance, smooth surfaces like water reflect very little energy (dark pixels), while corners of buildings often create a strong “double bounce” signal (bright pixels).\nOne of the most interesting parts was understanding how SAR is applied in real-world crises. In lecture, we explored how it can detect building collapse, damage zones, or ground displacement. But it also requires specific preprocessing—like speckle filtering and geometric correction—to be interpretable. This made me realise that SAR data, while powerful, isn’t plug-and-play like optical imagery.\nIn the practical, we used Google Earth Engine and a pre-written script from Bellingcat to analyse the 2020 Beirut port explosion. By comparing Sentinel-1 images before and after the event, we applied a pixel-wise t-test to identify significant backscatter changes. The function tTestChange() returned a raster of t-scores, showing which areas were most likely damaged. The result was then cross-referenced with known infrastructure layers to validate accuracy.\nThis workflow helped me understand how SAR can support rapid disaster response and post-conflict damage assessment—even in places where optical images are unavailable or too slow to capture. It also showed me that change detection isn’t just visual—it’s statistical. The power of SAR is not just in seeing through clouds, but in making urban change measurable and actionable, especially when time and visibility are limited.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>SAR</span>"
+    ]
+  },
+  {
+    "objectID": "week9.html#applications",
+    "href": "week9.html#applications",
+    "title": "8  SAR",
+    "section": "8.2 Applications",
+    "text": "8.2 Applications\nSAR has become a key tool in remote sensing for urban crisis monitoring—especially in situations where optical imagery fails. This includes both post-disaster and post-conflict scenarios, where access is limited and speed is essential. In this week’s practical, we used Sentinel-1 imagery and a t-test–based method in Google Earth Engine to detect infrastructure damage after the 2020 Beirut port explosion. The script helped identify statistically significant backscatter changes—offering a pixel-by-pixel view of impact zones even when visual inspection was impossible.\nThis workflow isn’t just useful for explosions. SAR has been used in earthquake zones (e.g. in Türkiye and Nepal) to detect collapsed buildings, especially where rescue access is delayed. Similarly, in flood monitoring, SAR’s ability to penetrate clouds makes it ideal for emergency response mapping. For example, Sentinel-1 data was used to detect submerged urban areas during Cyclone Idai in Mozambique—delivering actionable maps when visibility was near zero (Pham et al., 2020).\nIn conflict zones, SAR offers a unique form of “remote witnessing”. Studies have used multi-temporal Sentinel-1 to assess destruction in Aleppo and Mariupol when no ground verification was possible (Plank, 2017; Abbate et al., 2022). These approaches combine open-access data, automated scripts, and statistical logic to trace structural loss with minimal human input. Still, they aren’t foolproof—clutter, clean-up, or seasonal changes can trigger false positives. That’s why cross-validating with social media, local knowledge, or infrastructure layers remains essential.\nWhat stood out to me this week is how SAR-based classification goes beyond surface monitoring—it documents change under difficult conditions. In disaster or conflict settings, being able to quantify damage when no one can be on-site isn’t just technical—it can inform life-saving decisions, aid prioritisation, or accountability efforts. That makes SAR not just a sensing tool, but a civic one.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>SAR</span>"
+    ]
+  },
+  {
+    "objectID": "week9.html#reflections",
+    "href": "week9.html#reflections",
+    "title": "8  SAR",
+    "section": "8.3 Reflections",
+    "text": "8.3 Reflections\nThis week changed how I see the role of satellite imagery in crisis contexts. Before this, I mostly associated Earth Observation with long-term land cover monitoring or climate modelling. But working with SAR data on the Beirut case made me realise how fast and tactical remote sensing can be. You’re not just observing land—you’re tracing impact, in places where journalists, responders, or even drones can’t reach. There’s something powerful about being able to “witness” damage without being physically present.\nAt the same time, it also made me more cautious. The t-test method felt statistically clean, but I kept wondering—how many of these “damaged” pixels were just noise? In post-blast chaos, new clutter or partial cleanup could trigger false alarms. It reminded me that even a neat raster is the result of many choices: window size, threshold, preprocessing. Without context, it’s easy to over-read or misinterpret results.\nWhat I keep thinking about is: who has access to this kind of spatial intelligence? Platforms like GEE make it more open, but knowing how to ask the right questions, and validate what you see, still requires training. In that sense, I don’t just want to become better at analysis—I want to become better at caution, too. If SAR is to support cities in crisis, we need not just algorithms, but reflexivity: to ask what we’re measuring, who it’s for, and what might be missing. That, to me, is what makes EO meaningful—not just the pixels, but the questions they provoke.",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>SAR</span>"
     ]
   }
 ]

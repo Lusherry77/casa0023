@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction to Remote Sensing – CASA0023 Learning Diary</title>
+<title>8&nbsp; SAR – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./chapter2.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./week8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week9.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
@@ -127,31 +127,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Temperature</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week9.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -170,14 +176,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a>
-  <ul class="collapse">
-  <li><a href="#what-is-remote-sensing" id="toc-what-is-remote-sensing" class="nav-link" data-scroll-target="#what-is-remote-sensing"><span class="header-section-number">1.1.1</span> What is remote sensing?</a></li>
-  <li><a href="#electromagnetic-radiation-interacts" id="toc-electromagnetic-radiation-interacts" class="nav-link" data-scroll-target="#electromagnetic-radiation-interacts"><span class="header-section-number">1.1.2</span> Electromagnetic radiation interacts</a></li>
-  <li><a href="#resolutions" id="toc-resolutions" class="nav-link" data-scroll-target="#resolutions"><span class="header-section-number">1.1.3</span> Resolutions</a></li>
-  </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">1.2</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a></li>
+  <li><a href="#reflections" id="toc-reflections" class="nav-link" data-scroll-target="#reflections"><span class="header-section-number">8.3</span> Reflections</a></li>
   </ul>
 </nav>
     </div>
@@ -186,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></h1>
 </div>
 
 
@@ -203,37 +204,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summary" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
-<section id="what-is-remote-sensing" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="what-is-remote-sensing"><span class="header-section-number">1.1.1</span> What is remote sensing?</h3>
-<p>This week was the first session of Remote Sensing Cities and Environments. In the lecture, Andy introduced us to the foundational concepts of remote sensing, starting with NASA’s definition: acquiring information from a distance. We explored two key types of sensors: Passive (like optical cameras that rely on sunlight) and Active (like radar systems that send out their own signals and record what bounces back). This distinction is fundamental because it affects when, how, and under what conditions we can collect data.</p>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>This week focused on Synthetic Aperture Radar (SAR) and how it can be used to detect urban change, especially in high-risk or data-scarce environments. Unlike optical data, SAR uses microwave signals to actively illuminate the Earth’s surface, making it resilient to cloud cover and usable at night. We learned that SAR images represent backscatter intensity, which depends on surface geometry, moisture, and material properties. For instance, smooth surfaces like water reflect very little energy (dark pixels), while corners of buildings often create a strong “double bounce” signal (bright pixels).</p>
+<p>One of the most interesting parts was understanding how SAR is applied in real-world crises. In lecture, we explored how it can detect building collapse, damage zones, or ground displacement. But it also requires specific preprocessing—like speckle filtering and geometric correction—to be interpretable. This made me realise that SAR data, while powerful, isn’t plug-and-play like optical imagery.</p>
+<p>In the practical, we used Google Earth Engine and a pre-written script from Bellingcat to analyse the 2020 Beirut port explosion. By comparing Sentinel-1 images before and after the event, we applied a pixel-wise t-test to identify significant backscatter changes. The function tTestChange() returned a raster of t-scores, showing which areas were most likely damaged. The result was then cross-referenced with known infrastructure layers to validate accuracy.</p>
+<p>This workflow helped me understand how SAR can support rapid disaster response and post-conflict damage assessment—even in places where optical images are unavailable or too slow to capture. It also showed me that change detection isn’t just visual—it’s statistical. The power of SAR is not just in seeing through clouds, but in making urban change measurable and actionable, especially when time and visibility are limited.</p>
 </section>
-<section id="electromagnetic-radiation-interacts" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="electromagnetic-radiation-interacts"><span class="header-section-number">1.1.2</span> Electromagnetic radiation interacts</h3>
-<p>We also learned how electromagnetic radiation interacts with the Earth’s surface and atmosphere. Different wavelengths behave differently: shortwave radiation scatters easily (explaining why the sky is blue—Rayleigh scattering), while longer wavelengths can penetrate haze and even cloud cover. This is where Synthetic Aperture Radar (SAR) comes in—its ability to operate day or night and through clouds makes it invaluable for areas with frequent cloud cover or emergency mapping.</p>
+<section id="applications" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
+<p>SAR has become a key tool in remote sensing for urban crisis monitoring—especially in situations where optical imagery fails. This includes both post-disaster and post-conflict scenarios, where access is limited and speed is essential. In this week’s practical, we used Sentinel-1 imagery and a t-test–based method in Google Earth Engine to detect infrastructure damage after the 2020 Beirut port explosion. The script helped identify statistically significant backscatter changes—offering a pixel-by-pixel view of impact zones even when visual inspection was impossible.</p>
+<p>This workflow isn’t just useful for explosions. SAR has been used in earthquake zones (e.g.&nbsp;in Türkiye and Nepal) to detect collapsed buildings, especially where rescue access is delayed. Similarly, in flood monitoring, SAR’s ability to penetrate clouds makes it ideal for emergency response mapping. For example, Sentinel-1 data was used to detect submerged urban areas during Cyclone Idai in Mozambique—delivering actionable maps when visibility was near zero (Pham et al., 2020).</p>
+<p>In conflict zones, SAR offers a unique form of “remote witnessing”. Studies have used multi-temporal Sentinel-1 to assess destruction in Aleppo and Mariupol when no ground verification was possible (Plank, 2017; Abbate et al., 2022). These approaches combine open-access data, automated scripts, and statistical logic to trace structural loss with minimal human input. Still, they aren’t foolproof—clutter, clean-up, or seasonal changes can trigger false positives. That’s why cross-validating with social media, local knowledge, or infrastructure layers remains essential.</p>
+<p>What stood out to me this week is how SAR-based classification goes beyond surface monitoring—it documents change under difficult conditions. In disaster or conflict settings, being able to quantify damage when no one can be on-site isn’t just technical—it can inform life-saving decisions, aid prioritisation, or accountability efforts. That makes SAR not just a sensing tool, but a civic one.</p>
 </section>
-<section id="resolutions" class="level3" data-number="1.1.3">
-<h3 data-number="1.1.3" class="anchored" data-anchor-id="resolutions"><span class="header-section-number">1.1.3</span> Resolutions</h3>
-<p>Another important part of the lecture was the breakdown of the four types of resolution:</p>
-<p>• Spatial (how big each pixel is on the ground)</p>
-<p>• Spectral (how many wavelength bands are recorded)</p>
-<p>• Radiometric (how finely energy differences can be detected)</p>
-<p>• Temporal (how often an area is revisited)</p>
-<p>Understanding these helped me realise that choosing satellite data isn’t just about “better resolution”—it’s always a trade-off. For example, higher spatial resolution may mean fewer spectral bands or longer revisit times.</p>
-<p>In the practical, we worked with Sentinel-2 Level 2A imagery in QGIS, focusing on the visible bands (B02, B03, B04) to create a true-colour image. We used the Identify tool to examine spectral reflectance curves, which helped us understand why different surfaces appear the way they do—vegetation reflects strongly in near-infrared, for example, while water absorbs most wavelengths. These hands-on steps helped me connect theoretical terms like “spectral signature” and “radiometric resolution” to something visual and intuitive. It felt like a good start, and also made me realise how much more there is to learn.</p>
-</section>
-</section>
-<section id="applications" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">1.2</span> Applications</h2>
-<p>While exploring Sentinel-2 data this week, I became curious about how basic vegetation indices like NDVI (Normalized Difference Vegetation Index) are used in real-world urban studies. NDVI is calculated using just two bands—red and near-infrared—and yet it’s widely used to map vegetation health, cover, and change. In cities, this simple index has been used to assess green space inequality, monitor urban expansion, or evaluate heat island effects. One study I looked at used NDVI to compare green space across Berlin neighbourhoods and found strong links between vegetation access and income levels (Kabisch and Haase, 2014). It was interesting to see how a relatively simple formula could contribute to complex social and environmental debates. However, this made me reflect more critically on how accurate NDVI really is. During the practical, we learned that even small factors—like haze or low sun angle—can affect reflectance values. These errors can propagate into NDVI calculations. This is why the Level 2A Sentinel-2 data we used had already undergone atmospheric correction, converting TOA (Top-of-Atmosphere) reflectance into BOA (Bottom-of-Atmosphere) reflectance. I hadn’t heard of this before, but it now seems like a key step. Without it, analysis like NDVI or land cover classification could give misleading results, especially in urban areas with shadows, mixed surfaces, and variable reflectivity.</p>
-<p>I also found that NDVI has limitations—it saturates in dense vegetation and doesn’t distinguish between types of green cover (e.g., parks vs.&nbsp;invasive plants). Some studies try to improve on this by using more complex indices or machine learning classifiers that incorporate multiple spectral bands. For example, Immitzer et al.&nbsp;(2016) combined BOA-corrected Sentinel-2 imagery with supervised learning to classify tree species with high accuracy.</p>
-<p>Another interesting point is spatial resolution. NDVI from MODIS is very coarse (250m+), while Sentinel-2 gives us 10m pixels. Depending on the research scale, that difference can really affect what kind of pattern we’re able to see—neighbourhood-level variation vs.&nbsp;general city-wide trends. This made me think that NDVI is useful, but needs to be interpreted carefully, and always with an understanding of the resolution and preprocessing behind it.</p>
-</section>
-<section id="reflection" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
-<p>This week changed the way I think about satellite imagery. I used to think of it as something visual and intuitive—like looking at a map(e.g.&nbsp;Google Earth). But when we actually started working with Sentinel-2 data, I realised how technical it really is. Even producing a basic true colour image required understanding which bands to use, their spatial resolutions, and why atmospheric correction matters. I had never thought about the difference between TOA and BOA reflectance before. BOA sounded like a small technical detail, but I now understand that without it, the data can be misleading—especially in cities, where shadows, air pollution, and reflective surfaces distort the signal.</p>
-<p>Another thing that stood out to me is how sensitive satellite data is to factors I had never considered—like solar angle, cloud cover, or even the time of year. I always thought satellite data was consistent and neutral, but this week made me question that assumption. The NDVI example helped clarify this. While the formula is simple, it relies heavily on clean input data. If the red or NIR bands are affected by haze or shadows, the NDVI result can show the wrong pattern entirely. So even something that looks “easy” can go wrong quickly if you don’t know what’s going on behind the scenes. This made me think about how remote sensing is presented in research or policy reports. It’s often shown as a neat map with colours, but no one talks about the processing choices behind it. I don’t think you need to be a specialist to use EO data—but you do need to understand where errors can come from. That feels especially important if this data is being used to support decisions. This week didn’t make me an expert, but it gave me a new layer of awareness that I didn’t have before. I now look at satellite images a bit differently—less like a photo, and more like a processed dataset that comes with trade-offs.</p>
+<section id="reflections" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflections"><span class="header-section-number">8.3</span> Reflections</h2>
+<p>This week changed how I see the role of satellite imagery in crisis contexts. Before this, I mostly associated Earth Observation with long-term land cover monitoring or climate modelling. But working with SAR data on the Beirut case made me realise how fast and tactical remote sensing can be. You’re not just observing land—you’re tracing impact, in places where journalists, responders, or even drones can’t reach. There’s something powerful about being able to “witness” damage without being physically present.</p>
+<p>At the same time, it also made me more cautious. The t-test method felt statistically clean, but I kept wondering—how many of these “damaged” pixels were just noise? In post-blast chaos, new clutter or partial cleanup could trigger false alarms. It reminded me that even a neat raster is the result of many choices: window size, threshold, preprocessing. Without context, it’s easy to over-read or misinterpret results.</p>
+<p>What I keep thinking about is: who has access to this kind of spatial intelligence? Platforms like GEE make it more open, but knowing how to ask the right questions, and validate what you see, still requires training. In that sense, I don’t just want to become better at analysis—I want to become better at caution, too. If SAR is to support cities in crisis, we need not just algorithms, but reflexivity: to ask what we’re measuring, who it’s for, and what might be missing. That, to me, is what makes EO meaningful—not just the pixels, but the questions they provoke.</p>
 
 
 </section>
@@ -658,13 +647,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Welcome">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Welcome</span>
+      <a href="./week8.html" class="pagination-link" aria-label="Classification II">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapter2.html" class="pagination-link" aria-label="Week 2 - Xaringan">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2 - Xaringan</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,7 +1,41 @@
-# Week 1 - Introduction to Remote Sensing
+# Introduction to Remote Sensing
 
-This is Chapter 1.
+## Summary
 
-```{r}
-1 + 1
-```
+### What is remote sensing?
+
+This week was the first session of Remote Sensing Cities and Environments. In the lecture, Andy introduced us to the foundational concepts of remote sensing, starting with NASA’s definition: acquiring information from a distance. We explored two key types of sensors: Passive (like optical cameras that rely on sunlight) and Active (like radar systems that send out their own signals and record what bounces back). This distinction is fundamental because it affects when, how, and under what conditions we can collect data.
+
+### Electromagnetic radiation interacts
+
+We also learned how electromagnetic radiation interacts with the Earth’s surface and atmosphere. Different wavelengths behave differently: shortwave radiation scatters easily (explaining why the sky is blue—Rayleigh scattering), while longer wavelengths can penetrate haze and even cloud cover. This is where Synthetic Aperture Radar (SAR) comes in—its ability to operate day or night and through clouds makes it invaluable for areas with frequent cloud cover or emergency mapping.
+
+### Resolutions
+
+Another important part of the lecture was the breakdown of the four types of resolution:
+
+• Spatial (how big each pixel is on the ground)
+
+• Spectral (how many wavelength bands are recorded)
+
+• Radiometric (how finely energy differences can be detected)
+
+• Temporal (how often an area is revisited)
+
+Understanding these helped me realise that choosing satellite data isn’t just about “better resolution”—it’s always a trade-off. For example, higher spatial resolution may mean fewer spectral bands or longer revisit times.
+
+In the practical, we worked with Sentinel-2 Level 2A imagery in QGIS, focusing on the visible bands (B02, B03, B04) to create a true-colour image. We used the Identify tool to examine spectral reflectance curves, which helped us understand why different surfaces appear the way they do—vegetation reflects strongly in near-infrared, for example, while water absorbs most wavelengths. These hands-on steps helped me connect theoretical terms like “spectral signature” and “radiometric resolution” to something visual and intuitive. It felt like a good start, and also made me realise how much more there is to learn.
+
+## Applications
+
+While exploring Sentinel-2 data this week, I became curious about how basic vegetation indices like NDVI (Normalized Difference Vegetation Index) are used in real-world urban studies. NDVI is calculated using just two bands—red and near-infrared—and yet it’s widely used to map vegetation health, cover, and change. In cities, this simple index has been used to assess green space inequality, monitor urban expansion, or evaluate heat island effects. One study I looked at used NDVI to compare green space across Berlin neighbourhoods and found strong links between vegetation access and income levels (Kabisch and Haase, 2014). It was interesting to see how a relatively simple formula could contribute to complex social and environmental debates. However, this made me reflect more critically on how accurate NDVI really is. During the practical, we learned that even small factors—like haze or low sun angle—can affect reflectance values. These errors can propagate into NDVI calculations. This is why the Level 2A Sentinel-2 data we used had already undergone atmospheric correction, converting TOA (Top-of-Atmosphere) reflectance into BOA (Bottom-of-Atmosphere) reflectance. I hadn’t heard of this before, but it now seems like a key step. Without it, analysis like NDVI or land cover classification could give misleading results, especially in urban areas with shadows, mixed surfaces, and variable reflectivity.
+
+I also found that NDVI has limitations—it saturates in dense vegetation and doesn’t distinguish between types of green cover (e.g., parks vs. invasive plants). Some studies try to improve on this by using more complex indices or machine learning classifiers that incorporate multiple spectral bands. For example, Immitzer et al. (2016) combined BOA-corrected Sentinel-2 imagery with supervised learning to classify tree species with high accuracy.
+
+Another interesting point is spatial resolution. NDVI from MODIS is very coarse (250m+), while Sentinel-2 gives us 10m pixels. Depending on the research scale, that difference can really affect what kind of pattern we’re able to see—neighbourhood-level variation vs. general city-wide trends. This made me think that NDVI is useful, but needs to be interpreted carefully, and always with an understanding of the resolution and preprocessing behind it.
+
+## Reflection
+
+This week changed the way I think about satellite imagery. I used to think of it as something visual and intuitive—like looking at a map(e.g. Google Earth). But when we actually started working with Sentinel-2 data, I realised how technical it really is. Even producing a basic true colour image required understanding which bands to use, their spatial resolutions, and why atmospheric correction matters. I had never thought about the difference between TOA and BOA reflectance before. BOA sounded like a small technical detail, but I now understand that without it, the data can be misleading—especially in cities, where shadows, air pollution, and reflective surfaces distort the signal.
+
+Another thing that stood out to me is how sensitive satellite data is to factors I had never considered—like solar angle, cloud cover, or even the time of year. I always thought satellite data was consistent and neutral, but this week made me question that assumption. The NDVI example helped clarify this. While the formula is simple, it relies heavily on clean input data. If the red or NIR bands are affected by haze or shadows, the NDVI result can show the wrong pattern entirely. So even something that looks “easy” can go wrong quickly if you don’t know what’s going on behind the scenes. This made me think about how remote sensing is presented in research or policy reports. It’s often shown as a neat map with colours, but no one talks about the processing choices behind it. I don’t think you need to be a specialist to use EO data—but you do need to understand where errors can come from. That feels especially important if this data is being used to support decisions. This week didn’t make me an expert, but it gave me a new layer of awareness that I didn’t have before. I now look at satellite images a bit differently—less like a photo, and more like a processed dataset that comes with trade-offs.

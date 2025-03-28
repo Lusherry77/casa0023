@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Week 3 - Corrections – CASA0023 Learning Diary</title>
+<title>3&nbsp; Corrections – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./chapter3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,13 +109,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1 - Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -165,15 +165,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#geometric-correction" id="toc-geometric-correction" class="nav-link" data-scroll-target="#geometric-correction"><span class="header-section-number">3.1.1</span> 📐Geometric Correction</a></li>
+  <li><a href="#atmospheric-correction" id="toc-atmospheric-correction" class="nav-link" data-scroll-target="#atmospheric-correction"><span class="header-section-number">3.1.2</span> 🌫Atmospheric Correction</a></li>
+  <li><a href="#topographic-correction" id="toc-topographic-correction" class="nav-link" data-scroll-target="#topographic-correction"><span class="header-section-number">3.1.3</span> 🏔Topographic Correction</a></li>
+  <li><a href="#radiometric-correction" id="toc-radiometric-correction" class="nav-link" data-scroll-target="#radiometric-correction"><span class="header-section-number">3.1.4</span> 🚀Radiometric Correction</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">3.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></h1>
 </div>
 
 
@@ -190,8 +204,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<p>This week focused on the essential preprocessing steps required to transform raw satellite imagery into reliable and analysis-ready data. We covered four main types of correction: geometric correction, atmospheric correction, Orthorectification correction and Radiometric Calibration.</p>
+<section id="geometric-correction" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.1</span> 📐Geometric Correction</h3>
+<p>Geometric correction aligns satellite images to real-world coordinates using Ground Control Points (GCPs) and transformation models. It ensures spatial accuracy for overlays and time series comparison. Even a small spatial misalignment can impact multi-date analysis or fusion with GIS layers.</p>
+</section>
+<section id="atmospheric-correction" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.2</span> 🌫Atmospheric Correction</h3>
+<p>Atmospheric correction accounts for the effects of gases, aerosols, and scattering. In the practical, we applied the Dark Object Subtraction (DOS) method, which assumes that some dark pixels should have near-zero reflectance. Even small amounts of haze can distort NDVI or land cover classification results, so this step is crucial.</p>
+</section>
+<section id="topographic-correction" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="topographic-correction"><span class="header-section-number">3.1.3</span> 🏔Topographic Correction</h3>
+<p>Topographic correction normalizes the effects of slope and aspect on reflectance, especially in hilly or mountainous areas. Methods like C-correction or Minnaert are used to adjust for terrain-induced illumination differences.</p>
+</section>
+<section id="radiometric-correction" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="radiometric-correction"><span class="header-section-number">3.1.4</span> 🚀Radiometric Correction</h3>
+<p>Radiometric correction adjusts for sensor noise and converts raw digital numbers (DN) to physical reflectance values using sensor calibration coefficients. This step is important for comparing data across sensors or time. Although simple in concept, it forms the foundation for any quantitative remote sensing work.</p>
+</section>
+</section>
+<section id="applications" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
+<p>This week’s practical pushed me to think beyond the interface and question what makes remote sensing outputs trustworthy. Preprocessing steps like terrain or geometric correction are often treated as minor, even optional. But in practice, they shape what becomes visible, measurable, and eventually actionable.For example, areas with even modest slopes can create shadows that suppress reflectance values in predictable ways—especially under low sun angles. If uncorrected, shaded but vegetated land can appear barren. That’s not just a misreading—it changes how we perceive ecological risk or urban green gaps. In cities where greening policies are spatially targeted, these distortions affect who gets counted and where resources go (Pandey et al., 2021; Shahtahmassebi et al., 2016). It’s easy to assume such errors only matter in mountains, but this week made me realise that topographic misrepresentation is more pervasive than I thought.</p>
+<p>The same applies to geometric correction. In our QGIS exercise, I realised how just a few misaligned pixels could fabricate a “change” over time. In policy settings, such pseudo-change can mislead everything from slum mapping to land tenure disputes to disaster damage assessments (Taubenböck et al., 2012). If informal housing shifts on a map due to poor alignment, it could be wrongly excluded from an infrastructure plan—or wrongly targeted for demolition.</p>
+<p>What troubles me most is that these decisions—resampling kernel, DEM use, GCP placement—are almost never documented in published maps or reports. The outputs are presented as objective layers, but the preprocessing that shaped them stays invisible. This week reframed how I see remote sensing. The map isn’t the territory—and preprocessing isn’t neutral. If left unexamined, it doesn’t just introduce error—it embeds bias that travels across time, space, and decisions (Brovelli et al., 2020).</p>
+</section>
+<section id="reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p>This week changed how I think about what satellite data actually is. I used to imagine remote sensing as a clean, visual layer—like a map you just open and read. But when we started manually applying corrections in QGIS, I realised how much “data preparation” is really about decision-making. It surprised me how sensitive the data is: just changing the resampling method or skipping a terrain correction can completely alter how land surfaces appear.</p>
+<p>What stood out most was the practical tension between accuracy and accessibility. On the one hand, it’s empowering to know that we can apply these corrections ourselves and improve the reliability of the data. On the other hand, I started wondering how often these steps are skipped in large-scale studies or open datasets. If preprocessing is hidden or inconsistent, then maps that look precise might actually be full of embedded assumptions.</p>
+<p>For my own work, I can see these tools being useful—not just the software, but the mindset of questioning what lies behind each image. Even something as simple as identifying a “dark object” isn’t straightforward in urban areas full of complex shadows and materials. This week reminded me that every pixel is a product of processing choices. If we don’t stay critical of those choices, we risk reading more into the data than is really there.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

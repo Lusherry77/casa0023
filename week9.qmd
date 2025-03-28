@@ -1,0 +1,29 @@
+# SAR
+
+## Summary
+
+This week focused on Synthetic Aperture Radar (SAR) and how it can be used to detect urban change, especially in high-risk or data-scarce environments. Unlike optical data, SAR uses microwave signals to actively illuminate the Earth’s surface, making it resilient to cloud cover and usable at night. We learned that SAR images represent backscatter intensity, which depends on surface geometry, moisture, and material properties. For instance, smooth surfaces like water reflect very little energy (dark pixels), while corners of buildings often create a strong “double bounce” signal (bright pixels).
+
+One of the most interesting parts was understanding how SAR is applied in real-world crises. In lecture, we explored how it can detect building collapse, damage zones, or ground displacement. But it also requires specific preprocessing—like speckle filtering and geometric correction—to be interpretable. This made me realise that SAR data, while powerful, isn’t plug-and-play like optical imagery.
+
+In the practical, we used Google Earth Engine and a pre-written script from Bellingcat to analyse the 2020 Beirut port explosion. By comparing Sentinel-1 images before and after the event, we applied a pixel-wise t-test to identify significant backscatter changes. The function tTestChange() returned a raster of t-scores, showing which areas were most likely damaged. The result was then cross-referenced with known infrastructure layers to validate accuracy.
+
+This workflow helped me understand how SAR can support rapid disaster response and post-conflict damage assessment—even in places where optical images are unavailable or too slow to capture. It also showed me that change detection isn’t just visual—it’s statistical. The power of SAR is not just in seeing through clouds, but in making urban change measurable and actionable, especially when time and visibility are limited.
+
+## Applications
+
+SAR has become a key tool in remote sensing for urban crisis monitoring—especially in situations where optical imagery fails. This includes both post-disaster and post-conflict scenarios, where access is limited and speed is essential. In this week’s practical, we used Sentinel-1 imagery and a t-test–based method in Google Earth Engine to detect infrastructure damage after the 2020 Beirut port explosion. The script helped identify statistically significant backscatter changes—offering a pixel-by-pixel view of impact zones even when visual inspection was impossible.
+
+This workflow isn’t just useful for explosions. SAR has been used in earthquake zones (e.g. in Türkiye and Nepal) to detect collapsed buildings, especially where rescue access is delayed. Similarly, in flood monitoring, SAR’s ability to penetrate clouds makes it ideal for emergency response mapping. For example, Sentinel-1 data was used to detect submerged urban areas during Cyclone Idai in Mozambique—delivering actionable maps when visibility was near zero (Pham et al., 2020).
+
+In conflict zones, SAR offers a unique form of “remote witnessing”. Studies have used multi-temporal Sentinel-1 to assess destruction in Aleppo and Mariupol when no ground verification was possible (Plank, 2017; Abbate et al., 2022). These approaches combine open-access data, automated scripts, and statistical logic to trace structural loss with minimal human input. Still, they aren’t foolproof—clutter, clean-up, or seasonal changes can trigger false positives. That’s why cross-validating with social media, local knowledge, or infrastructure layers remains essential.
+
+What stood out to me this week is how SAR-based classification goes beyond surface monitoring—it documents change under difficult conditions. In disaster or conflict settings, being able to quantify damage when no one can be on-site isn’t just technical—it can inform life-saving decisions, aid prioritisation, or accountability efforts. That makes SAR not just a sensing tool, but a civic one.
+
+## Reflections
+
+This week changed how I see the role of satellite imagery in crisis contexts. Before this, I mostly associated Earth Observation with long-term land cover monitoring or climate modelling. But working with SAR data on the Beirut case made me realise how fast and tactical remote sensing can be. You’re not just observing land—you’re tracing impact, in places where journalists, responders, or even drones can’t reach. There’s something powerful about being able to “witness” damage without being physically present.
+
+At the same time, it also made me more cautious. The t-test method felt statistically clean, but I kept wondering—how many of these “damaged” pixels were just noise? In post-blast chaos, new clutter or partial cleanup could trigger false alarms. It reminded me that even a neat raster is the result of many choices: window size, threshold, preprocessing. Without context, it’s easy to over-read or misinterpret results.
+
+What I keep thinking about is: who has access to this kind of spatial intelligence? Platforms like GEE make it more open, but knowing how to ask the right questions, and validate what you see, still requires training. In that sense, I don’t just want to become better at analysis—I want to become better at caution, too. If SAR is to support cities in crisis, we need not just algorithms, but reflexivity: to ask what we’re measuring, who it’s for, and what might be missing. That, to me, is what makes EO meaningful—not just the pixels, but the questions they provoke.

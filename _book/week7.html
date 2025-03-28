@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Week 7 - Classification II – CASA0023 Learning Diary</title>
+<title>6&nbsp; Classification I – CASA0023 Learning Diary</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,13 +109,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1 - Introduction to Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,31 +127,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3 - Corrections</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Corrections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Temperature</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -165,15 +171,35 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#why-classification-matters" id="toc-why-classification-matters" class="nav-link" data-scroll-target="#why-classification-matters"><span class="header-section-number">6.1.1</span> Why classification matters</a></li>
+  <li><a href="#classification-types" id="toc-classification-types" class="nav-link" data-scroll-target="#classification-types"><span class="header-section-number">6.1.2</span> Classification types</a></li>
+  <li><a href="#how-it-works-in-practice" id="toc-how-it-works-in-practice" class="nav-link" data-scroll-target="#how-it-works-in-practice"><span class="header-section-number">6.1.3</span> How it works in practice</a></li>
+  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues"><span class="header-section-number">6.1.4</span> Common issues</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#supervised-classification-in-practice" id="toc-supervised-classification-in-practice" class="nav-link" data-scroll-target="#supervised-classification-in-practice"><span class="header-section-number">6.2.1</span> Supervised classification in practice</a></li>
+  <li><a href="#comparing-classifiers-cart-svm-random-forest" id="toc-comparing-classifiers-cart-svm-random-forest" class="nav-link" data-scroll-target="#comparing-classifiers-cart-svm-random-forest"><span class="header-section-number">6.2.2</span> Comparing classifiers: CART, SVM, Random Forest</a></li>
+  <li><a href="#accuracy-isnt-just-a-number" id="toc-accuracy-isnt-just-a-number" class="nav-link" data-scroll-target="#accuracy-isnt-just-a-number"><span class="header-section-number">6.2.3</span> Accuracy isn’t just a number</a></li>
+  <li><a href="#beyond-pixels-can-classification-be-smarter" id="toc-beyond-pixels-can-classification-be-smarter" class="nav-link" data-scroll-target="#beyond-pixels-can-classification-be-smarter"><span class="header-section-number">6.2.4</span> Beyond pixels: can classification be smarter?</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
 </div>
 
 
@@ -190,8 +216,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<section id="why-classification-matters" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="why-classification-matters"><span class="header-section-number">6.1.1</span> Why classification matters</h3>
+<p>Classification helps convert pixel values from satellite images into meaningful land cover types (e.g.&nbsp;vegetation, built-up, water). This is essential for monitoring land change, urban sprawl, and ecosystem health. One real-world example mentioned in class is the use of classification by Brazilian authorities to detect illegal logging in near-real time.</p>
+</section>
+<section id="classification-types" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="classification-types"><span class="header-section-number">6.1.2</span> Classification types</h3>
+<p>Supervised classification: Requires labelled training data (e.g.&nbsp;CART, Random Forest, SVM)</p>
+<p>Unsupervised classification: No training labels, uses clustering (e.g.&nbsp;K-means, ISODATA)</p>
+<p>CART and SVM can be more accurate, but depend heavily on good sample data.</p>
+<p>K-means is fast but hard to interpret.</p>
+</section>
+<section id="how-it-works-in-practice" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="how-it-works-in-practice"><span class="header-section-number">6.1.3</span> How it works in practice</h3>
+<p>In the GEE practical, we:</p>
+<p>Collected training data (water, urban, vegetation)</p>
+<p>Used .train() to create a CART classifier</p>
+<p>Applied .classify() to generate a land cover map</p>
+<p>Used a confusion matrix to assess classification accuracy</p>
+</section>
+<section id="common-issues" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="common-issues"><span class="header-section-number">6.1.4</span> Common issues</h3>
+<p>Overfitting: Small sample sizes can lead to models that don’t generalise well</p>
+<p>Mixed pixels: Especially common in cities (e.g.&nbsp;one pixel contains both road and vegetation)</p>
+<p>“Black box” models: Methods like Random Forest or SVM may be hard to interpret</p>
+<p>This week made me realise that classification isn’t just technical—it’s a decision-making process. For example, how we define categories, choose samples, or handle spectral confusion can all affect what our map shows.</p>
+</section>
+</section>
+<section id="applications" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
+<section id="supervised-classification-in-practice" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="supervised-classification-in-practice"><span class="header-section-number">6.2.1</span> Supervised classification in practice</h3>
+<p>In the GEE practical, we used supervised classification with CART. We collected training data for classes like vegetation, urban, and water, trained the model using .train(), then applied .classify() and assessed results with a confusion matrix.</p>
+<p>This matched the supervised workflow described in Jensen (2015, Ch. 9), where classification depends heavily on representative training data. Even small spatial bias in our samples—like too few water points—led to frequent misclassification.</p>
+</section>
+<section id="comparing-classifiers-cart-svm-random-forest" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="comparing-classifiers-cart-svm-random-forest"><span class="header-section-number">6.2.2</span> Comparing classifiers: CART, SVM, Random Forest</h3>
+<p>CART is easy to implement, but prone to overfitting. Random Forest addresses this by aggregating many trees with bootstrapped samples. SVMs are more precise in defining boundaries but require careful tuning.</p>
+<p>In urban contexts, these methods have been applied to identify informal settlements, vegetation fragmentation, and impervious surfaces (GISGeography, 2014; Pal &amp; Mather, 2005).</p>
+</section>
+<section id="accuracy-isnt-just-a-number" class="level3" data-number="6.2.3">
+<h3 data-number="6.2.3" class="anchored" data-anchor-id="accuracy-isnt-just-a-number"><span class="header-section-number">6.2.3</span> Accuracy isn’t just a number</h3>
+<p>The confusion matrix gives a surface-level view of accuracy—but it’s highly sensitive to sample size, class imbalance, and label quality. I realised that changing just a few training points can “improve” accuracy artificially.</p>
+<p>This connects to Barsi et al.&nbsp;(2018), who argue that thematic accuracy is multidimensional, involving sampling, classification logic, and even post-processing.</p>
+</section>
+<section id="beyond-pixels-can-classification-be-smarter" class="level3" data-number="6.2.4">
+<h3 data-number="6.2.4" class="anchored" data-anchor-id="beyond-pixels-can-classification-be-smarter"><span class="header-section-number">6.2.4</span> Beyond pixels: can classification be smarter?</h3>
+<p>Unsupervised methods like K-means are useful in data-scarce settings, but hard to interpret. Jensen (2015, Ch. 10) also describes “expert systems” that embed domain logic into classification—suggesting potential for hybrid models.</p>
+<p>This made me think: can we move beyond purely spectral classification, especially in cities where land cover types are defined by social and spatial context?</p>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
+<p>This week made me think about classification in a different way. Before, I thought it was a technical step—pick a classifier, label some training points, press run. But when I actually started working with the samples, I realised it’s not that simple. Just deciding where to draw a polygon, or how many points to add, can totally change the outcome. The map still looks clean—but what’s underneath might not be that solid.</p>
+<p>It also made me more aware of how “accuracy” can be a bit misleading. It’s easy to get a high overall score, but if your samples are unbalanced or your categories vague, it doesn’t mean the result is useful. That’s something I hadn’t really thought about before. Now I feel like classification isn’t just about getting a nice-looking map—it’s about making conscious decisions, and knowing what your choices might hide or distort.</p>
+<p>I still think these tools are powerful, especially in big-scale urban monitoring. But I’m starting to pay more attention to the invisible stuff: what gets included, what gets left out, and how much we actually trust these results when they’re used to inform planning or policy.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -613,13 +697,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week6.html" class="pagination-link" aria-label="Week 6 - Classification I">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span>
+      <a href="./week6.html" class="pagination-link" aria-label="Google Earth Engine">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week8.html" class="pagination-link" aria-label="Week 8 - Temperature">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Temperature</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week8.html" class="pagination-link" aria-label="Classification II">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
