@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -163,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -220,19 +239,19 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
 <section id="classifying-by-groups-not-pixels" class="level3" data-number="7.2.1">
 <h3 data-number="7.2.1" class="anchored" data-anchor-id="classifying-by-groups-not-pixels"><span class="header-section-number">7.2.1</span> Classifying by groups, not pixels</h3>
-<p>In this week’s practical, we used pixel-based classification, but I’ve learned that it doesn’t always work well in messy urban areas. A growing number of studies now use object-based image analysis (OBIA), where the algorithm looks at clusters of pixels instead of treating each one alone. For example, OBIA was used in a recent Google Earth Engine (GEE) study combining Sentinel-1, Sentinel-2 and PlanetScope data to identify informal settlements. By grouping pixels into meaningful objects, they could more accurately distinguish buildings from roads or vegetation—something pixel-level methods often misclassify (Matarira et al., 2023).</p>
+<p>In this week’s practical, we used pixel-based classification, but I’ve learned that it doesn’t always work well in messy urban areas. A growing number of studies now use object-based image analysis (OBIA), where the algorithm looks at clusters of pixels instead of treating each one alone. For example, OBIA was used in a recent GEE study combining Sentinel-1, Sentinel-2 and PlanetScope data to identify informal settlements. By grouping pixels into meaningful objects, they could more accurately distinguish buildings from roads or vegetation—something pixel-level methods often misclassify <span class="citation" data-cites="Matarira2023">(<a href="#ref-Matarira2023" role="doc-biblioref">Matarira et al., 2023</a>)</span>.</p>
 </section>
 <section id="when-one-pixel-isnt-just-one-thing" class="level3" data-number="7.2.2">
 <h3 data-number="7.2.2" class="anchored" data-anchor-id="when-one-pixel-isnt-just-one-thing"><span class="header-section-number">7.2.2</span> When one pixel isn’t just one thing</h3>
-<p>Another thing I hadn’t thought about much before is how mixed many pixels are—especially around the edges of urban and natural features. A pixel might contain 40% grass and 60% road, but most classifiers still force it into just one category. This is where sub-pixel classification and spectral mixture models are useful. These techniques let us estimate what proportion of each land cover type exists inside a pixel (Foody, 2004). While GEE doesn’t yet directly support full unmixing workflows, researchers have implemented simplified versions using band ratios and linear regressions (Jensen, 2015).</p>
+<p>Another thing I hadn’t thought about much before is how mixed many pixels are—especially around the edges of urban and natural features. A pixel might contain 40% grass and 60% road, but most classifiers still force it into just one category. This is where sub-pixel classification and spectral mixture models are useful. These techniques let us estimate what proportion of each land cover type exists inside a pixel <span class="citation" data-cites="Foody2004">(<a href="#ref-Foody2004" role="doc-biblioref">Foody, 2004</a>)</span>. While GEE doesn’t yet directly support full unmixing workflows, researchers have implemented simplified versions using band ratios and linear regressions <span class="citation" data-cites="Jensen2015">(<a href="#ref-Jensen2015" role="doc-biblioref">Jensen, 2015</a>)</span>.</p>
 </section>
 <section id="accuracy-is-trickier-than-it-looks" class="level3" data-number="7.2.3">
 <h3 data-number="7.2.3" class="anchored" data-anchor-id="accuracy-is-trickier-than-it-looks"><span class="header-section-number">7.2.3</span> Accuracy is trickier than it looks</h3>
-<p>We often evaluate classification performance using a confusion matrix, but I’ve learned that this can be misleading. For example, if training and validation samples are placed too close together, spatial autocorrelation can inflate the accuracy score without truly improving the model (Karasiak et al., 2022). In our own practical, changing just a few training points noticeably shifted the results. And when one class—like “water”—has very few samples, user accuracy can drop even if the overall accuracy stays high. These issues support the view that accuracy isn’t just a number—it depends on thoughtful sample design, spatial distribution, and balanced class selection (Barsi et al., 2018).</p>
+<p>We often evaluate classification performance using a confusion matrix, but I’ve learned that this can be misleading. For example, if training and validation samples are placed too close together, spatial autocorrelation can inflate the accuracy score without truly improving the model <span class="citation" data-cites="Karasiak2022">(<a href="#ref-Karasiak2022" role="doc-biblioref">Karasiak et al., 2022</a>)</span>. In our own practical, changing just a few training points noticeably shifted the results. And when one class—like “water”—has very few samples, user accuracy can drop even if the overall accuracy stays high. These issues support the view that accuracy isn’t just a number—it depends on thoughtful sample design, spatial distribution, and balanced class selection <span class="citation" data-cites="Barsi2018">(<a href="#ref-Barsi2018" role="doc-biblioref">Barsi et al., 2018</a>)</span>.</p>
 </section>
 <section id="classification-is-just-the-start" class="level3" data-number="7.2.4">
 <h3 data-number="7.2.4" class="anchored" data-anchor-id="classification-is-just-the-start"><span class="header-section-number">7.2.4</span> Classification is just the start</h3>
-<p>In many real-world use cases, classification isn’t the end goal—it’s a step toward detecting changes over time. For instance, urban growth or deforestation can be tracked by applying the same classification logic to imagery from multiple dates. But if your classifier uses different training data or sample logic across dates, you might “see” change that’s actually just inconsistency in your method. Even small changes to how we define training points can distort change detection (Jensen, 2015). That’s why in projects linked to policy—like SDG monitoring or climate resilience—it’s crucial to keep classification workflows consistent and reproducible.</p>
+<p>In many real-world use cases, classification isn’t the end goal—it’s a step toward detecting changes over time. For instance, urban growth or deforestation can be tracked by applying the same classification logic to imagery from multiple dates. But if your classifier uses different training data or sample logic across dates, you might “see” change that’s actually just inconsistency in your method. Even small changes to how we define training points can distort change detection <span class="citation" data-cites="Jensen2015">(<a href="#ref-Jensen2015" role="doc-biblioref">Jensen, 2015</a>)</span>. That’s why in projects linked to policy—like SDG monitoring or climate resilience—it’s crucial to keep classification workflows consistent and reproducible.</p>
 </section>
 </section>
 <section id="reflection" class="level2" data-number="7.3">
@@ -242,6 +261,23 @@ ul.task-list li input[type="checkbox"] {
 <p>One thing that stayed with me is how important consistency is across time. In policy-oriented work—like tracking urban SDGs or climate adaptation zones—we can’t afford to let each year’s classification use different rules. That would make change detection meaningless. From now on, I’ll be more critical not just about accuracy, but about the transparency and repeatability of the workflows behind the scenes.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Barsi2018" class="csl-entry" role="listitem">
+Barsi, Á., Kugler, Z., László, I., Szabó, G. and Abdulmutalib, H. 2018. Accuracy dimensions in remote sensing <em>In</em>: <em>International archives of the photogrammetry, remote sensing &amp; spatial information sciences</em>.
+</div>
+<div id="ref-Foody2004" class="csl-entry" role="listitem">
+Foody, G.M. 2004. Sub-pixel methods in remote sensing <em>In</em>: S. M. D. Jong and F. D. V. der Meer, eds. <em>Remote sensing image analysis</em>. Springer, pp.37–49.
+</div>
+<div id="ref-Jensen2015" class="csl-entry" role="listitem">
+Jensen, J.R. 2015. <em>Introductory digital image processing: A remote sensing perspective</em>. Prentice-Hall Inc.
+</div>
+<div id="ref-Karasiak2022" class="csl-entry" role="listitem">
+Karasiak, N., Dejoux, J.-F., Monteil, C. and Sheeren, D. 2022. Spatial dependence between training and test sets: Another pitfall of classification accuracy assessment in remote sensing. <em>Machine Learning</em>. <strong>111</strong>(9), pp.2715–2740.
+</div>
+<div id="ref-Matarira2023" class="csl-entry" role="listitem">
+Matarira, D., Mutanga, O., Naidu, M. and Vizzari, M. 2023. Object-based informal settlement mapping in google earth engine using the integration of sentinel-1, sentinel-2, and PlanetScope satellite data. <em>Land</em>. <strong>12</strong>(1), p.99.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

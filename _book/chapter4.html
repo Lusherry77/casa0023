@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -139,25 +158,31 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Temperature</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -206,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="summary" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
-<p>The Ahmedabad Heat Action Plan (HAP) is the first comprehensive heat-health policy implemented in South Asia. Ahmedabad, a rapidly urbanising city in Gujarat, India, experienced a deadly heatwave in 2010 that led to over 1,300 excess deaths. In response, the city partnered with public health experts, meteorologists, and urban planners to launch a pioneering plan to reduce heat-related mortality and build long-term climate resilience (Knowlton et al., 2014).</p>
+<p>The Ahmedabad Heat Action Plan (HAP) is the first comprehensive heat-health policy implemented in South Asia. Ahmedabad, a rapidly urbanising city in Gujarat, India, experienced a deadly heatwave in 2010 that led to over 1,300 excess deaths. In response, the city partnered with public health experts, meteorologists, and urban planners to launch a pioneering plan to reduce heat-related mortality and build long-term climate resilience <span class="citation" data-cites="Knowlton2014">(<a href="#ref-Knowlton2014" role="doc-biblioref">Knowlton et al., 2014</a>)</span>.</p>
 <p>The policy includes a multi-pronged strategy: early warning systems based on temperature forecasts, public education campaigns to increase heat risk awareness, training for medical professionals, and the establishment of “cooling spaces” such as temples and public buildings. One of its most important goals is to prioritise vulnerable populations, particularly the elderly, informal workers, and residents of low-income, high-density areas.</p>
 <p>Ahmedabad’s urban form—high impervious surface cover, limited green space, and dense informal settlements—makes it particularly vulnerable to Urban Heat Island (UHI) effects. While the HAP does not explicitly reference Earth Observation (EO) data, many of its components, like hotspot mapping and monitoring of intervention effectiveness, could benefit from remotely sensed inputs. The plan has since been adapted in several Indian cities, and it aligns closely with international goals like SDG 3 (Good Health and Well-being), SDG 11 (Sustainable Cities), and SDG 13 (Climate Action).</p>
 <p>I found it compelling that this policy treats extreme heat not only as a weather issue, but as a public health and equity concern. It shows how spatial data, urban planning, and healthcare can come together to respond to the complex challenge of climate-driven risks in cities.</p>
@@ -219,15 +244,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="solution-using-modis-lst-to-detect-urban-heat-patterns" class="level3" data-number="4.2.2">
 <h3 data-number="4.2.2" class="anchored" data-anchor-id="solution-using-modis-lst-to-detect-urban-heat-patterns"><span class="header-section-number">4.2.2</span> Solution: Using MODIS LST to Detect Urban Heat Patterns</h3>
-<p>MODIS Land Surface Temperature (LST) offers a valuable dataset to address this gap. With its near-daily temporal resolution and 1 km spatial coverage, MODIS enables continuous monitoring of urban heat islands (UHI). These data can be used to build heat vulnerability maps that combine temperature with population density, housing quality or informal settlement locations—helping target cooling centres or emergency services (Wellmann et al., 2020).</p>
+<p>MODIS Land Surface Temperature (LST) offers a valuable dataset to address this gap. With its near-daily temporal resolution and 1 km spatial coverage, MODIS enables continuous monitoring of urban heat islands (UHI). These data can be used to build heat vulnerability maps that combine temperature with population density, housing quality or informal settlement locations—helping target cooling centres or emergency services <span class="citation" data-cites="Wellmann2020">(<a href="#ref-Wellmann2020" role="doc-biblioref">Wellmann et al., 2020</a>)</span>.</p>
 </section>
 <section id="evaluation-measuring-the-impact-of-cooling-policies" class="level3" data-number="4.2.3">
 <h3 data-number="4.2.3" class="anchored" data-anchor-id="evaluation-measuring-the-impact-of-cooling-policies"><span class="header-section-number">4.2.3</span> Evaluation: Measuring the Impact of Cooling Policies</h3>
-<p>MODIS LST is also useful for evaluating the effectiveness of interventions. For example, after installing green roofs or tree cover, the same dataset can be used to track whether the targeted neighbourhoods are actually cooling over time. This helps cities move toward evidence-based, adaptive planning (Gerasopoulos et al., 2022).</p>
+<p>MODIS LST is also useful for evaluating the effectiveness of interventions. For example, after installing green roofs or tree cover, the same dataset can be used to track whether the targeted neighbourhoods are actually cooling over time. This helps cities move toward evidence-based, adaptive planning <span class="citation" data-cites="Gerasopoulos2022">(<a href="#ref-Gerasopoulos2022" role="doc-biblioref">Gerasopoulos et al., 2022</a>)</span>.</p>
 </section>
 <section id="broader-value-affordable-scalable-policy-aligned" class="level3" data-number="4.2.4">
 <h3 data-number="4.2.4" class="anchored" data-anchor-id="broader-value-affordable-scalable-policy-aligned"><span class="header-section-number">4.2.4</span> Broader Value: Affordable, Scalable, Policy-Aligned</h3>
-<p>Unlike ground monitoring networks, which are costly and sparse, MODIS provides open-access, globally consistent data—making urban heat tracking feasible even in resource-limited cities. This approach doesn’t replace local knowledge but enhances it. By integrating such data, Ahmedabad’s HAP contributes to SDG 11 (Sustainable Cities) and SDG 13 (Climate Action) while building a more inclusive and data-driven governance system (Li et al., 2022).</p>
+<p>Unlike ground monitoring networks, which are costly and sparse, MODIS provides open-access, globally consistent data—making urban heat tracking feasible even in resource-limited cities. This approach doesn’t replace local knowledge but enhances it. By integrating such data, Ahmedabad’s HAP contributes to SDG 11 (Sustainable Cities) and SDG 13 (Climate Action) while building a more inclusive and data-driven governance system <span class="citation" data-cites="Li2022">(<a href="#ref-Li2022" role="doc-biblioref">Li et al., 2022</a>)</span>.</p>
 </section>
 </section>
 <section id="reflection" class="level2" data-number="4.3">
@@ -237,6 +262,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Working with the data made me more aware of how much policy depends on interpretation. A satellite image doesn’t mean anything until someone asks: what should we do about this? It also reminded me that the barrier is not just technology, but capacity—having people, skills, and systems in place to act on data. For me, the most valuable lesson was seeing how something as technical as thermal imagery can contribute to decisions that affect real lives. That feels both exciting and humbling.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Gerasopoulos2022" class="csl-entry" role="listitem">
+Gerasopoulos, E., Bailey, J., Athanasopoulou, E., Speyer, O., Kocman, D., Raudner, A., Tsouni, A., Kontoes, H., Johansson, C., Georgiadis, C., Matthias, V., Kussul, N., Aquilino, M. and Paasonen, P. 2022. Earth observation: An integral part of a smart and sustainable city. <em>Environmental Science &amp; Policy</em>. <strong>132</strong>, pp.296–307.
+</div>
+<div id="ref-Knowlton2014" class="csl-entry" role="listitem">
+Knowlton, K., Kulkarni, S.P., Azhar, G.S., Mavalankar, D., Jaiswal, A., Connolly, M., Nori-Sarma, A., Rajiva, A., Dutta, P., Deol, B. and Hess, J.J. 2014. Development and implementation of south asia’s first heat-health action plan in ahmedabad (gujarat, india). <em>International Journal of Environmental Research and Public Health</em>. <strong>11</strong>(4), pp.3473–3492.
+</div>
+<div id="ref-Li2022" class="csl-entry" role="listitem">
+Li, D., Newman, G.D., Wilson, B., Zhang, Y. and Brown, R.D. 2022. Modeling the relationships between historical redlining, urban heat, and heat-related emergency department visits: An examination of 11 texas cities. <em>Environment and Planning B: Urban Analytics and City Science</em>. <strong>49</strong>(4), pp.933–952.
+</div>
+<div id="ref-Wellmann2020" class="csl-entry" role="listitem">
+Wellmann, T., Lausch, A., Andersson, E., Knapp, S., Cortinovis, C., Jache, J., Scheuer, S., Kremer, P., Mascarenhas, A., Kraemer, R., Haase, A., Schug, F. and Haase, D. 2020. Remote sensing in urban planning: Contributions towards ecologically sound policies? <em>Landscape and Urban Planning</em>. <strong>204</strong>, p.103921.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -664,8 +703,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week6.html" class="pagination-link" aria-label="Week 6 - Classification I">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week6.html" class="pagination-link" aria-label="Google Earth Engine">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

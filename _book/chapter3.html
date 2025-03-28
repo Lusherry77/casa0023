@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -133,31 +152,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./chapter4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 6 - Classification I</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 7 - Classification II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week 8 - Temperature</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -226,9 +251,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
-<p>This week’s practical pushed me to think beyond the interface and question what makes remote sensing outputs trustworthy. Preprocessing steps like terrain or geometric correction are often treated as minor, even optional. But in practice, they shape what becomes visible, measurable, and eventually actionable.For example, areas with even modest slopes can create shadows that suppress reflectance values in predictable ways—especially under low sun angles. If uncorrected, shaded but vegetated land can appear barren. That’s not just a misreading—it changes how we perceive ecological risk or urban green gaps. In cities where greening policies are spatially targeted, these distortions affect who gets counted and where resources go (Pandey et al., 2021; Shahtahmassebi et al., 2016). It’s easy to assume such errors only matter in mountains, but this week made me realise that topographic misrepresentation is more pervasive than I thought.</p>
-<p>The same applies to geometric correction. In our QGIS exercise, I realised how just a few misaligned pixels could fabricate a “change” over time. In policy settings, such pseudo-change can mislead everything from slum mapping to land tenure disputes to disaster damage assessments (Taubenböck et al., 2012). If informal housing shifts on a map due to poor alignment, it could be wrongly excluded from an infrastructure plan—or wrongly targeted for demolition.</p>
-<p>What troubles me most is that these decisions—resampling kernel, DEM use, GCP placement—are almost never documented in published maps or reports. The outputs are presented as objective layers, but the preprocessing that shaped them stays invisible. This week reframed how I see remote sensing. The map isn’t the territory—and preprocessing isn’t neutral. If left unexamined, it doesn’t just introduce error—it embeds bias that travels across time, space, and decisions (Brovelli et al., 2020).</p>
+<p>This week’s practical pushed me to think beyond the interface and question what makes remote sensing outputs trustworthy. Preprocessing steps like terrain or geometric correction are often treated as minor, even optional. But in practice, they shape what becomes visible, measurable, and eventually actionable.For example, areas with even modest slopes can create shadows that suppress reflectance values in predictable ways—especially under low sun angles. If uncorrected, shaded but vegetated land can appear barren. That’s not just a misreading—it changes how we perceive ecological risk or urban green gaps. In cities where greening policies are spatially targeted, these distortions affect who gets counted and where resources go <span class="citation" data-cites="Pandey2021 Shahtahmassebi2016">(<a href="#ref-Shahtahmassebi2016" role="doc-biblioref">Shahtahmassebi et al., 2016</a>; <a href="#ref-Pandey2021" role="doc-biblioref">Pandey et al., 2021</a>)</span>. It’s easy to assume such errors only matter in mountains, but this week made me realise that topographic misrepresentation is more pervasive than I thought.</p>
+<p>The same applies to geometric correction. In our QGIS exercise, I realised how just a few misaligned pixels could fabricate a “change” over time. In policy settings, such pseudo-change can mislead everything from slum mapping to land tenure disputes to disaster damage assessments <span class="citation" data-cites="Taubenbock2012">(<a href="#ref-Taubenbock2012" role="doc-biblioref">Taubenböck et al., 2012</a>)</span>. If informal housing shifts on a map due to poor alignment, it could be wrongly excluded from an infrastructure plan—or wrongly targeted for demolition.</p>
+<p>What troubles me most is that these decisions—resampling kernel, DEM use, GCP placement—are almost never documented in published maps or reports. The outputs are presented as objective layers, but the preprocessing that shaped them stays invisible. This week reframed how I see remote sensing. The map isn’t the territory—and preprocessing isn’t neutral. If left unexamined, it doesn’t just introduce error—it embeds bias that travels across time, space, and decisions <span class="citation" data-cites="Brovelli2020">(<a href="#ref-Brovelli2020" role="doc-biblioref">Brovelli et al., 2020</a>)</span>.</p>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
@@ -237,6 +262,20 @@ ul.task-list li input[type="checkbox"] {
 <p>For my own work, I can see these tools being useful—not just the software, but the mindset of questioning what lies behind each image. Even something as simple as identifying a “dark object” isn’t straightforward in urban areas full of complex shadows and materials. This week reminded me that every pixel is a product of processing choices. If we don’t stay critical of those choices, we risk reading more into the data than is really there.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Brovelli2020" class="csl-entry" role="listitem">
+Brovelli, M.A., Zamboni, G. and Mitasova, H. 2020. Positioning uncertainty in urban change detection: The hidden role of geometric error. <em>Computers, Environment and Urban Systems</em>. <strong>81</strong>, p.101477.
+</div>
+<div id="ref-Pandey2021" class="csl-entry" role="listitem">
+Pandey, B., Joshi, P.K. and Seto, K.C. 2021. Urban vegetation and terrain effects on satellite-based greenness indices in himalayan cities. <em>Urban Forestry &amp; Urban Greening</em>. <strong>58</strong>, p.126948.
+</div>
+<div id="ref-Shahtahmassebi2016" class="csl-entry" role="listitem">
+Shahtahmassebi, A., Wang, K., Moore, N., Zhang, Y. and Shen, Z. 2016. Review of shadow detection and compensation in remote sensing. <em>Remote Sensing</em>. <strong>8</strong>(9), p.706.
+</div>
+<div id="ref-Taubenbock2012" class="csl-entry" role="listitem">
+Taubenböck, H., Esch, T., Felbier, A., Wiesner, M., Roth, A. and Dech, S. 2012. Monitoring urbanization in mega cities from space. <em>Remote Sensing of Environment</em>. <strong>117</strong>, pp.162–176.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -664,8 +703,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./chapter4.html" class="pagination-link" aria-label="Week 4 - Policy">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4 - Policy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./chapter4.html" class="pagination-link" aria-label="Policy">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
