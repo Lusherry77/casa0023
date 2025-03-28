@@ -2,4 +2,6 @@
 
 Hi there~
 
-I'm Yidian.
+I’m Yidian, a postgraduate student in the CASA MSc Urban Spatial Science programme, with an undergraduate background in Landscape Architecture.
+
+I’ve always been interested in how spatial environments shape daily life, especially in the context of urban inequality and climate resilience. This module marks my first in-depth journey into remote sensing. Rather than just picking up technical tools, I hope to explore how satellite data can meaningfully contribute to urban planning, policy, and spatial justice, bridging data and real-world impact.
